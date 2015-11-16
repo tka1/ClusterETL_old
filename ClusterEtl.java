@@ -1,4 +1,3 @@
-package telnet_client;
 
 import java.io.*;
 import java.util.Scanner;
@@ -6,8 +5,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Date;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.net.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
+
+import com.mongodb.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ClusterEtl
 {
@@ -15,7 +28,7 @@ public class ClusterEtl
 	
 	 
 	
-    public static void main(String[] args) throws IOException 
+    public static void main(String[] args) throws IOException, ParseException 
     {
     	
     	//get address & port from input dialog
@@ -131,7 +144,8 @@ public class ClusterEtl
                                                       String country_2 = country.Search(dxcall);
                                                       System.out.println(dxcall + "  " +country_2);
                                                       double freq = Double.parseDouble(response.substring(17, 25));
-                                                      S_N = response.substring(40, 43).trim();
+                                                      //S_N = response.substring(40, 43).trim();
+                                                      S_N = response.substring(47, 49).trim();
                                                       time = response.substring(70, 74);
                                                       StringBuffer newtime = new StringBuffer(time);
                                                       newtime.insert(2,  ":");
@@ -139,6 +153,7 @@ public class ClusterEtl
                                                       String pattern = "yyyy-MM-dd";
                                                       SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
                                                       String date = simpleDateFormat.format(new Date());
+                                                      String datetime = date + " " + newtime;
                                                       if (freq >= 1800 && freq <= 1900 ) {
                                                     	  band = "160M";
                                                       }
@@ -181,6 +196,113 @@ public class ClusterEtl
                                                       bufferWritter.newLine();
                                                       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
+                                                      
+                                                      try {
+                                          	            // connect to mongo server
+                                                    	  Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
+                                                    	  mongoLogger.setLevel(Level.SEVERE);
+                                                    	  
+                                          	            MongoClient mongo = new MongoClient("localhost", 27017);
+                                                    	 // MongoClient mongo = new MongoClient("localhost", 3001);
+
+                                          	            // create a blank database
+                                          	            DB db = mongo.getDB("cluster");
+                                          	            
+                                          	            DBCollection coll = db.getCollection("cluster");
+                                          	            //System.out.println("Collection created successfully");
+                                          	            
+                                          	            BasicDBObject doc = new BasicDBObject("title", "cluster").
+                                          	                    append("decall", decall).
+                                          	                    append("dxcall", dxcall).
+                                          	                    append("freq", freq).
+                                          	                    append("band", band).
+                                          	            		append("S/N", S_N).
+                                          	            		append("datetime", datetime).
+                                          	            		append("country", country_2);
+                                          	            
+                                          	                 coll.insert(doc);
+                                          	                 //System.out.println("Document inserted successfully");
+                                          	                 
+                                          	               BasicDBObject searchQuery = new BasicDBObject();
+                                          	         	searchQuery.put("dxcall", dxcall);
+
+                                          	         	DBCursor cursor = coll.find(searchQuery);
+
+                                          	         	//while (cursor.hasNext()) {
+                                          	         		//System.out.println(cursor.next());
+                                          	         	//}
+                                          	         	System.out.println(cursor.count());
+                                          	         	//System.out.println(coll.distinct("dxcall"));
+                                          	         	System.out.println( coll.count(new BasicDBObject("band", new BasicDBObject("$gt", 130000))));
+                                          	         	                                 	        
+                                          	         	  mongo.close();
+
+                                          	            //display statistics
+                                          	            //System.out.println(db.getStats());
+                                          	        } catch (Exception e) {
+                                          	            System.out.println("Error in creating database.");
+                                          	            e.printStackTrace();
+                                          	         
+                                          	        }
+                                                      
+                                                      Connection con = null;
+                                                      Statement st = null;
+                                                      ResultSet rs = null;
+                                                      PreparedStatement pst = null;
+
+                                                  
+                                                      String url = "jdbc:postgresql://localhost/postgres";
+                                                      String user = "postgres";
+                                                      String password = "powerday1!";
+                                                      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm");
+                                                      java.util.Date newdate = sdf.parse(datetime);
+                                                      java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
+                                                     System.out.println(S_N);
+                                                      try {
+                                                          con = DriverManager.getConnection(url, user, password);
+                                                         // String decall = "OH2BBT";
+                                                         // String dxcall = "OH2GI";
+                                                          //st = con.createStatement();
+                                                          //rs = st.executeQuery("SELECT VERSION()");
+
+                                                          //if (rs.next()) {
+                                                            //  System.out.println(rs.getString(1));
+                                                          //}
+                                                          
+                                                          //String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, S/N, datetime) VALUES(?, ?, ? ,?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, datetime,sig_noise, country) VALUES(?, ?, ?, ?, ?, ?, ?)";
+                                                          pst = con.prepareStatement(stm);
+                                                          pst.setString(1, decall);
+                                                          pst.setString(2, dxcall); 
+                                                          pst.setDouble(3, freq);
+                                                          pst.setString(4, band);
+                                                          pst.setTimestamp(5, sqlDate);
+                                                          pst.setString(6, S_N);
+                                                          pst.setString(7, country_2);
+                                                          pst.executeUpdate();
+
+
+                                                      } catch (SQLException ex) {
+                                                          Logger lgr = Logger.getLogger(PostreSql.class.getName());
+                                                          lgr.log(Level.SEVERE, ex.getMessage(), ex);
+
+                                                      } finally {
+                                                          try {
+                                                              if (rs != null) {
+                                                                  rs.close();
+                                                              }
+                                                              if (st != null) {
+                                                                  st.close();
+                                                              }
+                                                              if (con != null) {
+                                                                  con.close();
+                                                              }
+
+                                                          } catch (SQLException ex) {
+                                                              Logger lgr = Logger.getLogger(PostreSql.class.getName());
+                                                              lgr.log(Level.WARNING, ex.getMessage(), ex);
+                                                          }
+                                                      }
                            }
                            }
                            //close the i/o streams
@@ -194,3 +316,4 @@ public class ClusterEtl
     }
    
 }
+
