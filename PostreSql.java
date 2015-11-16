@@ -9,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
 import java.sql.Timestamp;
 import java.text.ParseException;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class PostreSql {
 
@@ -18,6 +20,17 @@ public class PostreSql {
         Statement st = null;
         ResultSet rs = null;
         PreparedStatement pst = null;
+      
+        SimpleDateFormat formatUTC = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ssZ");  
+
+
+
+        String pattern = "yyyy-MM-dd";
+      
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Pacific/Kiritimati")); 
+        String dateutc = simpleDateFormat.format(new Date());
+        System.out.println(dateutc);
 
     
         String url = "jdbc:postgresql://localhost/postgres";
@@ -34,8 +47,8 @@ public class PostreSql {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm");
             java.util.Date date = sdf.parse(datetime);
             java.sql.Timestamp sqlDate = new Timestamp(date.getTime());
-            System.out.println("String converted to java.sql.Date :" + sqlDate);
-            System.out.println("Date :" + date);
+            //System.out.println("String converted to java.sql.Date :" + sqlDate);
+            //System.out.println("Date :" + date);
             
             //st = con.createStatement();
             //rs = st.executeQuery("SELECT VERSION()");

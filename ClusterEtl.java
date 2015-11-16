@@ -1,6 +1,8 @@
 
 import java.io.*;
 import java.util.Scanner;
+import java.util.TimeZone;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.Date;
@@ -144,14 +146,15 @@ public class ClusterEtl
                                                       String country_2 = country.Search(dxcall);
                                                       System.out.println(dxcall + "  " +country_2);
                                                       double freq = Double.parseDouble(response.substring(17, 25));
-                                                      //S_N = response.substring(40, 43).trim();
-                                                      S_N = response.substring(47, 49).trim();
+                                                      S_N = response.substring(40, 43).trim();
+                                                      //S_N = response.substring(46, 49).trim();
                                                       time = response.substring(70, 74);
                                                       StringBuffer newtime = new StringBuffer(time);
                                                       newtime.insert(2,  ":");
                                                       
                                                       String pattern = "yyyy-MM-dd";
                                                       SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                                                      simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC")); 
                                                       String date = simpleDateFormat.format(new Date());
                                                       String datetime = date + " " + newtime;
                                                       if (freq >= 1800 && freq <= 1900 ) {
@@ -197,8 +200,9 @@ public class ClusterEtl
                                                       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
                                                       
+                                            //Mongodb routines       
                                                       try {
-                                          	            // connect to mongo server
+                                          	       // connect to mongo server
                                                     	  Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
                                                     	  mongoLogger.setLevel(Level.SEVERE);
                                                     	  
@@ -223,53 +227,44 @@ public class ClusterEtl
                                           	                 coll.insert(doc);
                                           	                 //System.out.println("Document inserted successfully");
                                           	                 
-                                          	               BasicDBObject searchQuery = new BasicDBObject();
+                                          	        // statistics         
+                                          	            /*BasicDBObject searchQuery = new BasicDBObject();
                                           	         	searchQuery.put("dxcall", dxcall);
-
                                           	         	DBCursor cursor = coll.find(searchQuery);
-
-                                          	         	//while (cursor.hasNext()) {
-                                          	         		//System.out.println(cursor.next());
-                                          	         	//}
                                           	         	System.out.println(cursor.count());
-                                          	         	//System.out.println(coll.distinct("dxcall"));
-                                          	         	System.out.println( coll.count(new BasicDBObject("band", new BasicDBObject("$gt", 130000))));
+                                          	         	System.out.println( coll.count(new BasicDBObject("band", new BasicDBObject("$gt", 130000)))); */
                                           	         	                                 	        
                                           	         	  mongo.close();
 
-                                          	            //display statistics
-                                          	            //System.out.println(db.getStats());
+                                          	          
                                           	        } catch (Exception e) {
                                           	            System.out.println("Error in creating database.");
                                           	            e.printStackTrace();
-                                          	         
-                                          	        }
-                                                      
+                                          //Mongodb routine end
+                                          	            }
+                                          // PostregSQL routines
                                                       Connection con = null;
                                                       Statement st = null;
                                                       ResultSet rs = null;
                                                       PreparedStatement pst = null;
-
+                                                      
+                                                      //date time format change
+                                                      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+                                                      simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Helsinki")); 
+                                                      java.util.Date newdate = sdf.parse(datetime);
+                                                      java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
+                                                      System.out.println(newdate);
+                                                      System.out.println(datetime);
+                                                      System.out.println(sqlDate);
+                                                    //date time format change
                                                   
                                                       String url = "jdbc:postgresql://localhost/postgres";
                                                       String user = "postgres";
                                                       String password = "powerday1!";
-                                                      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm");
-                                                      java.util.Date newdate = sdf.parse(datetime);
-                                                      java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
-                                                     System.out.println(S_N);
-                                                      try {
+                                                                                                  
+                                                     try {
                                                           con = DriverManager.getConnection(url, user, password);
-                                                         // String decall = "OH2BBT";
-                                                         // String dxcall = "OH2GI";
-                                                          //st = con.createStatement();
-                                                          //rs = st.executeQuery("SELECT VERSION()");
-
-                                                          //if (rs.next()) {
-                                                            //  System.out.println(rs.getString(1));
-                                                          //}
-                                                          
-                                                          //String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, S/N, datetime) VALUES(?, ?, ? ,?, ?, ?)";
+                                                         
                                                           String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, datetime,sig_noise, country) VALUES(?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, decall);
@@ -303,6 +298,7 @@ public class ClusterEtl
                                                               lgr.log(Level.WARNING, ex.getMessage(), ex);
                                                           }
                                                       }
+                                            //PostregSQL routines end
                            }
                            }
                            //close the i/o streams
