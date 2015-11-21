@@ -1,3 +1,5 @@
+package etl;
+
 
 import java.io.*;
 import java.util.Scanner;
@@ -23,21 +25,25 @@ import java.text.SimpleDateFormat;
 import com.mongodb.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ClusterEtl
 {
- 
-	
-	 
-	
+
+                            
+                             
+                            
     public static void main(String[] args) throws IOException, ParseException 
     {
-    	
-    	//get address & port from input dialog
+                            
+                            //get address & port from input dialog
         String clusteraddress = JOptionPane.showInputDialog(null, "Enter  cluster address " );
         String port = JOptionPane.showInputDialog(null, "Enter cluster port " );
         int iport = Integer.parseInt(port);
- 	    
+                               
     //Frame initialization
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("My First Swing Example");
@@ -62,7 +68,7 @@ public class ClusterEtl
         
    // parameter initializations            
         CountrySearch2 country = new CountrySearch2();       
-    	String decall= null;
+                            String decall= null;
         String decall_trimmed= null;
         String dxcall= null;
         //Double freq = null;
@@ -79,14 +85,14 @@ public class ClusterEtl
                            File file =new File("cluster_" + clusteraddress + ".txt");
                            //if file does'nt exists, then create it
                            if(!file.exists()){
-                        	    newfile = true;
-                        	       file.createNewFile();
+                              newfile = true;
+                                 file.createNewFile();
                            }
                            FileWriter fileWritter = new FileWriter(file.getName(),true);
                            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
    // write header if file not exits
         if(newfile) {
-        	 bufferWritter.write("decall;dxcall;freq;band;S/N;datetime;country;continent");
+                            bufferWritter.write("decall;dxcall;freq;band;S/N;datetime;country;continent");
              bufferWritter.newLine();
              bufferWritter.flush();
         }
@@ -158,39 +164,39 @@ public class ClusterEtl
                                                       String date = simpleDateFormat.format(new Date());
                                                       String datetime = date + " " + newtime;
                                                       if (freq >= 1800 && freq <= 1900 ) {
-                                                    	  band = "160M";
+                                                      band = "160M";
                                                       }
                                                       
                                                       if (freq >= 3500 && freq <= 3700 ) {
-                                                    	  band = "80M";
+                                                      band = "80M";
                                                       }
                                                       
                                                       if (freq >= 7000 && freq <= 7200 ) {
-                                                    	  band = "40M";
+                                                      band = "40M";
                                                       }
                                                       
                                                       if (freq >= 10100 && freq <= 10150 ) {
-                                                    	  band = "30M";
+                                                      band = "30M";
                                                       }
                                                       
                                                       if (freq >= 14000 && freq <= 14500 ) {
-                                                    	  band = "20M";
+                                                      band = "20M";
                                                       }
                                                       
                                                       if (freq >= 18000 && freq <= 19000 ) {
-                                                    	  band = "17M";
+                                                      band = "17M";
                                                       }
                                                       
                                                       if (freq >= 21000 && freq <= 21500 ) {
-                                                    	  band = "15M";
+                                                      band = "15M";
                                                       }
                                                       
                                                       if (freq >= 28000 && freq <= 28500 ) {
-                                                    	  band = "10M";
+                                                       band = "10M";
                                                       }
                                                       
                                                       if (freq >= 50000 && freq <= 51500 ) {
-                                                    	  band = "6M";
+                                                       band = "6M";
                                                       }
                                                       
                                                       
@@ -201,47 +207,47 @@ public class ClusterEtl
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
                                                       
                                             //Mongodb routines       
-                                                      try {
-                                          	       // connect to mongo server
-                                                    	  Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
-                                                    	  mongoLogger.setLevel(Level.SEVERE);
-                                                    	  
-                                          	            MongoClient mongo = new MongoClient("localhost", 27017);
-                                                    	 // MongoClient mongo = new MongoClient("localhost", 3001);
+                                                    /*  try {
+                                                            // connect to mongo server
+                                                      Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
+                                                      mongoLogger.setLevel(Level.SEVERE);
+                                                       
+                                                                 MongoClient mongo = new MongoClient("localhost", 27017);
+                                                     // MongoClient mongo = new MongoClient("localhost", 3001);
 
-                                          	            // create a blank database
-                                          	            DB db = mongo.getDB("cluster");
-                                          	            
-                                          	            DBCollection coll = db.getCollection("cluster");
-                                          	            //System.out.println("Collection created successfully");
-                                          	            
-                                          	            BasicDBObject doc = new BasicDBObject("title", "cluster").
-                                          	                    append("decall", decall).
-                                          	                    append("dxcall", dxcall).
-                                          	                    append("freq", freq).
-                                          	                    append("band", band).
-                                          	            		append("S/N", S_N).
-                                          	            		append("datetime", datetime).
-                                          	            		append("country", country_2);
-                                          	            
-                                          	                 coll.insert(doc);
-                                          	                 //System.out.println("Document inserted successfully");
-                                          	                 
-                                          	        // statistics         
-                                          	            /*BasicDBObject searchQuery = new BasicDBObject();
-                                          	         	searchQuery.put("dxcall", dxcall);
-                                          	         	DBCursor cursor = coll.find(searchQuery);
-                                          	         	System.out.println(cursor.count());
-                                          	         	System.out.println( coll.count(new BasicDBObject("band", new BasicDBObject("$gt", 130000)))); */
-                                          	         	                                 	        
-                                          	         	  mongo.close();
+                                                                 // create a blank database
+                                                                 DB db = mongo.getDB("cluster");
+                                                                 
+                                                                 DBCollection coll = db.getCollection("cluster");
+                                                                 //System.out.println("Collection created successfully");
+                                                                 
+                                                                 BasicDBObject doc = new BasicDBObject("title", "cluster").
+                                                                         append("decall", decall).
+                                                                         append("dxcall", dxcall).
+                                                                         append("freq", freq).
+                                                                         append("band", band).
+                                                                                                            append("S/N", S_N).
+                                                                                                            append("datetime", datetime).
+                                                                                                            append("country", country_2);
+                                                                 
+                                                                      coll.insert(doc); 
+                                                                      //System.out.println("Document inserted successfully");
+                                                                      
+                                                             // statistics         
+                                                                 BasicDBObject searchQuery = new BasicDBObject();
+                                                                                          searchQuery.put("dxcall", dxcall);
+                                                                                          DBCursor cursor = coll.find(searchQuery);
+                                                                                          System.out.println(cursor.count());
+                                                                                          System.out.println( coll.count(new BasicDBObject("band", new BasicDBObject("$gt", 130000)))); 
+                                                                                                                                                     
+                                                                                  mongo.close(); 
 
-                                          	          
-                                          	        } catch (Exception e) {
-                                          	            System.out.println("Error in creating database.");
-                                          	            e.printStackTrace();
+                                                               
+                                                             } catch (Exception e) {
+                                                                 System.out.println("Error in creating database.");
+                                                                 e.printStackTrace();
                                           //Mongodb routine end
-                                          	            }
+                                                                 } */
                                           // PostregSQL routines
                                                       Connection con = null;
                                                       Statement st = null;
@@ -253,14 +259,14 @@ public class ClusterEtl
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Helsinki")); 
                                                       java.util.Date newdate = sdf.parse(datetime);
                                                       java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
-                                                      System.out.println(newdate);
+                                                     System.out.println(newdate);
                                                       System.out.println(datetime);
                                                       System.out.println(sqlDate);
                                                     //date time format change
                                                   
                                                       String url = "jdbc:postgresql://localhost/postgres";
                                                       String user = "postgres";
-                                                      String password = "powerday1!";
+                                                      String password = "Powerday1!";
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
@@ -278,7 +284,7 @@ public class ClusterEtl
 
 
                                                       } catch (SQLException ex) {
-                                                          Logger lgr = Logger.getLogger(PostreSql.class.getName());
+                                                          Logger lgr = Logger.getLogger(ClusterEtl.class.getName());
                                                           lgr.log(Level.SEVERE, ex.getMessage(), ex);
 
                                                       } finally {
@@ -294,7 +300,7 @@ public class ClusterEtl
                                                               }
 
                                                           } catch (SQLException ex) {
-                                                              Logger lgr = Logger.getLogger(PostreSql.class.getName());
+                                                              Logger lgr = Logger.getLogger(ClusterEtl.class.getName());
                                                               lgr.log(Level.WARNING, ex.getMessage(), ex);
                                                           }
                                                       }
