@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://postgres:Powerday1!@127.0.0.1:5432/postgres";
+var conString = "postgres://postgres:password@127.0.0.1:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -26,9 +26,8 @@ res.setHeader("Access-Control-Allow-Origin", "*");
     if(err) {
       return console.error('error running query', err);
     }
-    console.log(result.rows);
-	data2 = result.rows; 
-	data3 = data2.toString();
+    //console.log(result.rows);
+	
 	//console.log(data3);
 	res.json( result );
 	 res.end();
