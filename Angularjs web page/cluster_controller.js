@@ -1,4 +1,6 @@
-function timecontrl($scope, $http, $timeout, $interval) {
+var app = angular.module("myApp",[])
+app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
+
 
     $scope.count = 0;
     $scope.ajaxPeriodicall = function() {
@@ -16,12 +18,8 @@ function timecontrl($scope, $http, $timeout, $interval) {
         
            $http.get('http://w520:8081/band').
          success(function(data, status, headers, config) {
-            // this callback will be called asynchronously
-            // when the response is available
-            //$scope.count = $scope.count + 1;
-            $scope.bandcount = data;
-             //$scope.clock = new Date();
-            console.log($scope.bandcount);
+         $scope.bandcount = data;
+            //console.log($scope.bandcount.rows);
             
          }); 
        
@@ -38,4 +36,4 @@ function timecontrl($scope, $http, $timeout, $interval) {
     
     
     
-}
+})
