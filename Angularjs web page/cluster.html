@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    
+  <head>
+    
+    <style>
+   table, th , td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 5px;
+   }
+   
+   table tr:nth-child(odd) {
+      background-color: #f2f2f2;
+   }
+
+   table tr:nth-child(even) {
+      background-color: #ffffff;
+   }
+</style>
+      
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+      <script type="text/javascript" src="js/fusioncharts.js"></script>
+<script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
+      <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
+    <script src="cluster_controller.js"></script> 
+
+    </head>
+    
+<body ng-app="myApp" ng-controller="timecontrl" >
+
+  
+
+   <!-- <p>   {{greeting}}  </p>
+    <p>   {{newbandcount}}  </p>-->
+             <button ng-click="start()">Start</button>
+ <button ng-click="stop()">Stop</button>
+         .........count = <b ng-bind="count"></b>
+    <p>  BAND COUNT </p>
+        <div fusioncharts width="400" height="200" type="column2d" chart="{{attrs}}", datasource="{{myDataSource}}" ></div>
+      <p>  COUNTRY COUNT </p>
+    
+           <div fusioncharts width="800" height="500" type="pie3d" chart="{{attrs}}", datasource="{{greeting}}" ></div>
+    </div>
+       
+
+    
+    <div>
+        
+
+        
+               
+
+      
+         
+                    
+    <table>
+   <tr>
+      <th>Count</th>
+      <th>band</th>
+   </tr>
+   
+   <tr ng-repeat = "d in bandcount.data">
+      <td>{{ d.value  }}</td>
+      <td>{{ d.label }}</td>
+   </tr>
+</table>
+           
+		 Row count is <b  ng-bind="greeting.rowCount"></b>
+               
+    <table>
+   <tr>
+      <th>Count</th>
+      <th>Country</th>
+   </tr>
+   
+   <tr ng-repeat = "d in greeting.data">
+      <td>{{ d.value  }}</td>
+      <td>{{ d.label }}</td>
+   </tr>
+</table>
+        
+      
+        
+        
+        
+
+        
+		</div> 
+    
+  
+  
+
+      
+        </body>
+    
+    
+       
+      
+</body>
+</html>
