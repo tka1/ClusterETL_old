@@ -25,22 +25,30 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
     
     }]
   };
+    
+     $scope.cumul = {
+           data:[{
+        label: "null",
+        value: "0"
+        }]
+  };
                    
     $scope.count = 0;
     $scope.ajaxPeriodicall = function() {
         
-        $http.get('http://localhost:8081/countrycount').
+        $http.get('http://192.168.1.33:8081/countrycount').
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
             $scope.count = $scope.count + 1;
             $scope.greeting = data;
-             $scope.clock = new Date();
+            var d = new Date();
+             $scope.clock = d.toDateString() + " " + d.getHours() + ":" + d.getMinutes() ;
            // console.log($scope.greeting);
             
          }); 
         
-           $http.get('http://localhost:8081/bandcount').
+           $http.get('http://192.168.1.33:8081/bandcount').
          success(function(data, status, headers, config) {
          $scope.bandcount = data;
          
@@ -51,13 +59,23 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
     };  
                         
          });
+        
+              $http.get('http://192.168.1.33:8081/cumul').
+         success(function(data, status, headers, config) {
+            // this callback will be called asynchronously
+            // when the response is available
+            $scope.cumul = data;
+            
+          
+            
+         }); 
                     
     };
 
     $scope.start = function() {
         
         
-       $scope.myCall = $interval($scope.ajaxPeriodicall, 7000);        
+       $scope.myCall = $interval($scope.ajaxPeriodicall, 5000);        
     };
 
     $scope.stop = function() {

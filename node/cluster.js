@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://postgres:powerday1!@127.0.0.1:5432/postgres";
+var conString = "postgres://postgres:Powerday1!@127.0.0.1:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -60,6 +60,36 @@ res.setHeader("Access-Control-Allow-Origin", "*");
            querydata.data.push(obj[i]);
       }
           
+      retdata = 
+      res.json(querydata);
+ 
+	
+    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
+    //client.end();
+  });
+});
+    
+        app.get('/cumul', function (req, res, next) {
+res.setHeader("Access-Control-Allow-Origin", "*");
+ 
+
+  client.query('SELECT "day/hour" as label,spot_count as value from cluster.cumul_spot_count ', function(err, result) {
+    if(err) {
+      return console.error('error running query', err);
+    }
+    
+	
+	//console.log(data3);
+      
+     var querydata = {};
+            var data = []
+            querydata.data = data;
+      
+      var obj = result.rows;
+      for (i = 0; i < obj.length; i++) {
+           querydata.data.push(obj[i]);
+      }
+          console.log(querydata);
       retdata = 
       res.json(querydata);
  

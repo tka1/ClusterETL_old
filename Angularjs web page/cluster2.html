@@ -3,86 +3,87 @@
 <html>
     
   <head>
-    
-    <style>
-   table, th , td {
-      border: 1px solid grey;
-      border-collapse: collapse;
-      padding: 5px;
-   }
-   
-   table tr:nth-child(odd) {
-      background-color: #f2f2f2;
-   }
-
-   table tr:nth-child(even) {
-      background-color: #ffffff;
-   }
-</style>
-      
+          
     
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
       <script type="text/javascript" src="js/fusioncharts.js"></script>
 <script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
       <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
     <script src="cluster_controller.js"></script> 
+      <link href="/style/style.css" type="text/css" rel="stylesheet" />
+
 
     </head>
     
-<body ng-app="myApp" ng-controller="timecontrl" >
+<body ng-app="myApp" ng-controller="timecontrl"  >
 
-    
-    
-    <div >
-        
-         <button ng-click="start()">Start</button>
+  
+	
+       
+		<div class="content">
+            <div class="header">
+             <h1 class="topH1"> OH2BBT skimmer statistics</h1>
+                </div>
+			
+		<div class="stuff">
+	
+
+  <div >
+             <button ng-click="start()">Start</button>
  <button ng-click="stop()">Stop</button>
          .........count = <b ng-bind="count"></b>
-        
-               
-
+    <p> {{clock}}</p>
       
-         
-      Row count is <b  ng-bind="bandcount.rowCount"></b>                 
-    <table>
+     
+               <p style="display:inline" fusioncharts width="600" height="300" type="column2d" chart="{{attrs}}", datasource="{{cumul}}" ></p>
+     
+    <p> SPOT COUNT FROM LAST HOUR  </p>
+        <div fusioncharts width="400" height="200" type="column2d" chart="{{attrs}}", datasource="{{myDataSource}}" ></div>
+     
+      <p>  COUNTRY COUNT </p>
+    
+           <div fusioncharts width="800" height="500" type="pie3d" chart="{{attrs}}", datasource="{{greeting}}" ></div>
+    </div>
+       
+
+    <div >
+                                 
+    <table class="tftable">
    <tr>
       <th>Count</th>
       <th>band</th>
    </tr>
    
-   <tr ng-repeat = "d in bandcount.rows">
-      <td>{{ d.kountti  }}</td>
-      <td>{{ d.band }}</td>
+   <tr ng-repeat = "d in bandcount.data">
+      <td>{{ d.value  }}</td>
+      <td>{{ d.label }}</td>
    </tr>
 </table>
            
-		 Row count is <b  ng-bind="greeting.rowCount"></b>
-               
-    <table>
+	               
+    <table class="tftable">
    <tr>
       <th>Count</th>
       <th>Country</th>
    </tr>
    
-   <tr ng-repeat = "d in greeting.rows">
-      <td>{{ d.kountti  }}</td>
-      <td>{{ d.country }}</td>
+   <tr ng-repeat = "d in greeting.data">
+      <td>{{ d.value  }}</td>
+      <td>{{ d.label }}</td>
    </tr>
 </table>
-      {{myDataSource}}       
-    <div fusioncharts
-       width="600"
-       height="400"
-       type="column2d"
-       dataSource="{{myDataSource}}" >
-    </div>
+        
+      
+        
+        
+        
 
         
 		</div> 
-    
+     </div> <!-- content -->
   
   
-
+</div><!-- content -->
       
         </body>
     
