@@ -1,3 +1,6 @@
+package etl;
+
+
 
 import java.io.*;
 import java.util.Scanner;
@@ -150,8 +153,10 @@ public class ClusterEtl
                                                       //S_N = response.substring(46, 49).trim();
                                                    
                                                       time = response.substring(70, response.length()).trim();
+                                                      String mode = response.substring((response.length()-16),(response.length()-7)).trim();
                                                       
-                                                      System.out.println(time);
+                                                      System.out.println(mode);
+                                                      
                                                       StringBuffer newtime = new StringBuffer(time);
                                                       newtime.insert(2,  ":");
                                                       
@@ -225,6 +230,7 @@ public class ClusterEtl
                                           	                    append("band", band).
                                           	            		append("S/N", S_N).
                                           	            		append("datetime", datetime).
+                                          	            		append("mode", mode).
                                           	            		append("country", country_2);
                                           	            
                                           	                 coll.insert(doc); 
@@ -263,12 +269,12 @@ public class ClusterEtl
                                                   
                                                       String url = "jdbc:postgresql://localhost/postgres";
                                                       String user = "postgres";
-                                                      String password = "xxxxxxx";
+                                                      String password = "Powerday1!";
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
                                                          
-                                                          String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, datetime,sig_noise, country) VALUES(?, ?, ?, ?, ?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, datetime,sig_noise, country, mode) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, decall);
                                                           pst.setString(2, dxcall); 
@@ -277,11 +283,12 @@ public class ClusterEtl
                                                           pst.setTimestamp(5, sqlDate);
                                                           pst.setString(6, S_N);
                                                           pst.setString(7, country_2);
+                                                          pst.setString(8, mode);
                                                           pst.executeUpdate();
 
 
                                                       } catch (SQLException ex) {
-                                                          Logger lgr = Logger.getLogger(PostreSql.class.getName());
+                                                          Logger lgr = Logger.getLogger(ClusterEtl.class.getName());
                                                           lgr.log(Level.SEVERE, ex.getMessage(), ex);
 
                                                       } finally {
@@ -297,7 +304,7 @@ public class ClusterEtl
                                                               }
 
                                                           } catch (SQLException ex) {
-                                                              Logger lgr = Logger.getLogger(PostreSql.class.getName());
+                                                              Logger lgr = Logger.getLogger(ClusterEtl.class.getName());
                                                               lgr.log(Level.WARNING, ex.getMessage(), ex);
                                                           }
                                                       }
