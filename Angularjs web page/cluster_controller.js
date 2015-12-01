@@ -8,8 +8,9 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         slicingdistance: "15",
         showpercentvalues: "1",
         showpercentintooltip: "0",
+        "paletteColors": "#0075c2",
 
-        theme: "fint"
+        theme: "zune"
           
     };
           $scope.myDataSource = {
