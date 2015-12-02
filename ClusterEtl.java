@@ -116,8 +116,17 @@ public class ClusterEtl
             System.err.println("Don't know about host : " + host);
             System.exit(1);
         }
+    	try
+		{	
+			s.setSoTimeout (10000);
+		}
+		catch (SocketException se)
+		{
+			System.err.println ("Unable to set socket option SO_TIMEOUT");
+		}
         
         //Send message to server
+       
                            String message = "OH2BBT";
                            s_out.println( message );
                                                                                   
@@ -125,8 +134,11 @@ public class ClusterEtl
                                                       
                            //Get response from server
                            String response;
-                           while ((response = s_in.readLine()) != null) 
+                           try
                            {
+                           while ((response = s_in.readLine()) != null) 
+                           {				{
+                           
                                                       System.out.println( response );
                                                      // write line
                                                       clusterTextArea.append(response + "\n");
@@ -274,22 +286,24 @@ public class ClusterEtl
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
                                                          
-                                                          String stm = "INSERT INTO cluster.clustertable(decall, dxcall, freq, band, datetime,sig_noise, country, mode) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
-                                                          pst.setString(1, decall);
-                                                          pst.setString(2, dxcall); 
-                                                          pst.setDouble(3, freq);
-                                                          pst.setString(4, band);
-                                                          pst.setTimestamp(5, sqlDate);
-                                                          pst.setString(6, S_N);
-                                                          pst.setString(7, country_2);
-                                                          pst.setString(8, mode);
+                                                          pst.setString(1, clusteraddress);
+                                                          pst.setString(2, decall);
+                                                          pst.setString(3, dxcall); 
+                                                          pst.setDouble(4, freq);
+                                                          pst.setString(5, band);
+                                                          pst.setTimestamp(6, sqlDate);
+                                                          pst.setString(7, S_N);
+                                                          pst.setString(8, country_2);
+                                                          pst.setString(9, mode);
                                                           pst.executeUpdate();
 
 
                                                       } catch (SQLException ex) {
                                                           Logger lgr = Logger.getLogger(ClusterEtl.class.getName());
                                                           lgr.log(Level.SEVERE, ex.getMessage(), ex);
+                                                          clusterTextArea.append(ex.getMessage() + "\n");
 
                                                       } finally {
                                                           try {
@@ -311,6 +325,16 @@ public class ClusterEtl
                                             //PostregSQL routines end
                            }
                            }
+                           
+                           }
+                           }
+                           catch (InterruptedIOException iioe)
+                           {
+                        	   clusterTextArea.append("Timeout occurred" + "\n");
+                        	   System.out.println ("Timeout occurred - killing connection");
+               				s.close();
+
+                           }
                            //close the i/o streams
                            s_out.close();
                            //in.close();
@@ -319,7 +343,12 @@ public class ClusterEtl
                            s.close();
                            
                            bufferWritter.close();
+                           clusterTextArea.append("connections killed" + "\n");
+                           System.out.println ("connections killed");
+       
+        
+        }
     }
    
-}
+
 
