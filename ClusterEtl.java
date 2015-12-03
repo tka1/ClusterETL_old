@@ -1,15 +1,12 @@
-package etl;
-
-
-
 import java.io.*;
-import java.util.Scanner;
+
 import java.util.TimeZone;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Date;
-import java.text.DateFormat;
+import java.util.Properties;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.net.*;
@@ -20,10 +17,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 
 
-import com.mongodb.*;
+
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,13 +34,38 @@ public class ClusterEtl
     {
     	
     	//get address & port from input dialog
-        String clusteraddress = JOptionPane.showInputDialog(null, "Enter  cluster address " );
-        String port = JOptionPane.showInputDialog(null, "Enter cluster port " );
-        int iport = Integer.parseInt(port);
+        //String clusteraddress = JOptionPane.showInputDialog(null, "Enter  cluster address " );
+        //String port = JOptionPane.showInputDialog(null, "Enter cluster port " );
+        //int iport = Integer.parseInt(port);
+    	String clusteraddress = null;
+    	String call = null;
+    	int iport = 0;
+    	File configFile = new File("config.properties");
+
+    	try {
+    		FileReader reader = new FileReader(configFile);
+    		Properties props = new Properties();
+    		props.load(reader);
+
+    		 clusteraddress = props.getProperty("address");
+    		String port = props.getProperty("port");
+    		call = props.getProperty("call");
+    		  iport = Integer.parseInt(port);
+
+    		System.out.print("Host name is: " + clusteraddress);
+    		System.out.print("  port is: " + port);
+    		reader.close();
+    	} catch (FileNotFoundException ex) {
+    		// file does not exist
+    		System.out.print("conf file not found");
+    	}
+    	
+    	
+    	
  	    
     //Frame initialization
         JFrame.setDefaultLookAndFeelDecorated(true);
-        JFrame frame = new JFrame("My First Swing Example");
+        JFrame frame = new JFrame(clusteraddress);
         // Setting the width and height of frame
         frame.setSize(700, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,7 +101,7 @@ public class ClusterEtl
   //log file initialization
                            PrintWriter s_out = null;
                            BufferedReader s_in = null;
-                           File file =new File("cluster_" + clusteraddress + ".txt");
+                           File file =new File("cluster_" + host + ".txt");
                            //if file does'nt exists, then create it
                            if(!file.exists()){
                         	    newfile = true;
@@ -118,7 +140,7 @@ public class ClusterEtl
         }
     	try
 		{	
-			s.setSoTimeout (10000);
+			s.setSoTimeout (30000);
 		}
 		catch (SocketException se)
 		{
@@ -127,13 +149,14 @@ public class ClusterEtl
         
         //Send message to server
        
-                           String message = "OH2BBT";
+                           String message = call;
                            s_out.println( message );
                                                                                   
                            System.out.println("Message send");
                                                       
                            //Get response from server
                            String response;
+                           while (true){
                            try
                            {
                            while ((response = s_in.readLine()) != null) 
@@ -288,7 +311,7 @@ public class ClusterEtl
                                                          
                                                           String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
-                                                          pst.setString(1, clusteraddress);
+                                                          pst.setString(1, clusteraddress + ":" + iport);
                                                           pst.setString(2, decall);
                                                           pst.setString(3, dxcall); 
                                                           pst.setDouble(4, freq);
@@ -332,23 +355,27 @@ public class ClusterEtl
                            {
                         	   clusterTextArea.append("Timeout occurred" + "\n");
                         	   System.out.println ("Timeout occurred - killing connection");
-               				s.close();
+               				//s.close();
 
                            }
+                          
                            //close the i/o streams
-                           s_out.close();
+                           //s_out.close();
                            //in.close();
                                                                                   
                            //close the socket
-                           s.close();
+                           //s.close();
                            
-                           bufferWritter.close();
-                           clusterTextArea.append("connections killed" + "\n");
+                          // bufferWritter.close();
+                          // clusterTextArea.append("connections killed" + "\n");
                            System.out.println ("connections killed");
        
         
-        }
+    
+                           }
+                           }
     }
+    
    
 
 

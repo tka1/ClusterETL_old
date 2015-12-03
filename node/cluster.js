@@ -10,35 +10,59 @@ client.connect(function(err) {
     return console.error('could not connect to postgres', err);
   }
 
-app.get('/users', function (req, res) {
-   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-       console.log( data );
-       res.end( data );
-   });
-})
 
 
-app.get('/countrycount', function (req, res, next) {
+
+app.get('/countrycount', function (req, res, response) {
 res.setHeader("Access-Control-Allow-Origin", "*");
- 
-
-  client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ', function(err, result) {
+   /*console.log("All query strings: " + JSON.stringify(req.query));*/
+var id1 = req.query.id;
+      console.log(id1);
+ var query = 'SELECT country as label, kountti as value from cluster.country_count('
+ query = query + id1 + ') order by 2 desc'
+ console.log(query);
+  /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
+    client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',function(err, result) {
     if(err) {
       return console.error('error running query', err);
     }
-    var querydata = {};
+        var querydata = {};
             var data = []
             querydata.data = data;
-      
-      var obj = result.rows;
+            var obj = result.rows;
       for (i = 0; i < obj.length; i++) {
            querydata.data.push(obj[i]);
       }
-          
       retdata = 
       res.json(querydata);
   });
 });
+    
+    app.get('/countrycount_band', function (req, res, response) {
+res.setHeader("Access-Control-Allow-Origin", "*");
+   /*console.log("All query strings: " + JSON.stringify(req.query));*/
+var id1 = req.query.id;
+      console.log(id1);
+ var query = 'SELECT country as label, kountti as value from cluster.country_count('
+ query = query + id1 + ') order by 2 desc'
+ console.log(query);
+  /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
+    client.query(query,function(err, result) {
+    if(err) {
+      return console.error('error running query', err);
+    }
+        var querydata = {};
+            var data = []
+            querydata.data = data;
+            var obj = result.rows;
+      for (i = 0; i < obj.length; i++) {
+           querydata.data.push(obj[i]);
+      }
+      retdata = 
+      res.json(querydata);
+  });
+});
+    
     app.get('/bandcount', function (req, res, next) {
 res.setHeader("Access-Control-Allow-Origin", "*");
  
@@ -89,7 +113,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
       for (i = 0; i < obj.length; i++) {
            querydata.data.push(obj[i]);
       }
-          console.log(querydata);
+          //console.log(querydata);
       retdata = 
       res.json(querydata);
  
