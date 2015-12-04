@@ -4,6 +4,7 @@ import java.util.TimeZone;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.util.Date;
 import java.util.Properties;
 
@@ -27,6 +28,11 @@ import java.util.logging.Logger;
 public class ClusterEtl
 {
  
+	class CustomActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            ;
+        }
+     }
 	
 	 
 	
@@ -64,6 +70,7 @@ public class ClusterEtl
     	
  	    
     //Frame initialization
+    	JButton bChange ;
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame(clusteraddress);
         // Setting the width and height of frame
@@ -80,6 +87,12 @@ public class ClusterEtl
        
         scrollPane.setPreferredSize(new Dimension(700, 700));
         panel.setLayout(new FlowLayout());
+     // construct a Button
+        bChange = new JButton("Click Me!"); 
+      
+
+        panel.add( bChange );  
+
         //panel.add(clusterTextArea);
         panel.add(scrollPane);
         frame.setVisible(true);
@@ -182,7 +195,15 @@ public class ClusterEtl
                                                       dxcall = dxcall.trim();
                                                       //String shortdxcall = dxcall.substring(0,4);
                                                       String country_2 = country.Search(dxcall);
+                                                      String dxcontinent = country_2.substring((country_2.length()-2));
+                                                      String finaldxcontinent = dxcontinent.replace("ll","");
                                                       System.out.println(dxcall + "  " +country_2);
+                                                      
+                                                      String de_continent = country.Search(decall);
+                                                      String decontinent = de_continent.substring((de_continent.length()-2));
+                                                      String finaldecontinent = decontinent.replace("ll","");
+                                                      System.out.println("de continent  " + finaldecontinent);
+                                                      System.out.println("dx continent  " + finaldxcontinent);
                                                       double freq = Double.parseDouble(response.substring(17, 25));
                                                       S_N = response.substring(40, 43).trim();
                                                       //S_N = response.substring(46, 49).trim();
@@ -190,7 +211,7 @@ public class ClusterEtl
                                                       time = response.substring(70, response.length()).trim();
                                                       String mode = response.substring((response.length()-16),(response.length()-7)).trim();
                                                       
-                                                      System.out.println(mode);
+                                                      //System.out.println(mode);
                                                       
                                                       StringBuffer newtime = new StringBuffer(time);
                                                       newtime.insert(2,  ":");
@@ -309,7 +330,7 @@ public class ClusterEtl
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
                                                          
-                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, clusteraddress + ":" + iport);
                                                           pst.setString(2, decall);
@@ -320,6 +341,8 @@ public class ClusterEtl
                                                           pst.setString(7, S_N);
                                                           pst.setString(8, country_2);
                                                           pst.setString(9, mode);
+                                                          pst.setString(10, finaldecontinent);
+                                                          pst.setString(11, finaldxcontinent);
                                                           pst.executeUpdate();
 
 
@@ -374,6 +397,8 @@ public class ClusterEtl
     
                            }
                            }
+    
+    
     }
     
    
