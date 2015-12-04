@@ -51,3 +51,86 @@ ALTER TABLE cluster.country_count
 
 ALTER TABLE cluster.cumul_spot_count
   OWNER TO postgres;
+
+CREATE OR REPLACE FUNCTION cluster.band_count(
+    IN de_continent text,
+    OUT kountti bigint,
+    OUT band text)
+  RETURNS SETOF record AS
+$BODY$
+ SELECT count(DISTINCT clustertable.dxcall) AS kountti,
+    clustertable.band
+   FROM cluster.clustertable
+  WHERE clustertable.insert_time >= (now() - '01:00:00'::interval)
+  and de_continent = left(($1),2)
+  GROUP BY clustertable.band;
+  $BODY$
+  LANGUAGE sql VOLATILE
+  COST 100
+  ROWS 1000;
+ALTER FUNCTION cluster.band_count(text)
+  OWNER TO postgres;
+  
+  CREATE OR REPLACE FUNCTION cluster.country_count(
+    IN de_continent text,
+    OUT kountti bigint,
+    OUT country text)
+  RETURNS SETOF record AS
+$BODY$
+SELECT count(clustertable.dxcall) AS kountti,
+    clustertable.country
+   FROM cluster.clustertable
+  WHERE clustertable.insert_time >= (now() - '01:00:00'::interval)
+  and de_continent = left(($1),2)
+  GROUP BY clustertable.country;
+  $BODY$
+  LANGUAGE sql VOLATILE
+  COST 100
+  ROWS 1000;
+ALTER FUNCTION cluster.country_count(text)
+  OWNER TO postgres;
+  
+  CREATE OR REPLACE FUNCTION cluster.country_count(
+    IN band text,
+    IN de_continent text,
+    OUT kountti bigint,
+    OUT country text)
+  RETURNS SETOF record AS
+$BODY$
+SELECT count(clustertable.dxcall) AS kountti,
+    clustertable.country
+   FROM cluster.clustertable
+  WHERE clustertable.insert_time >= (now() - '01:00:00'::interval)
+  and band = left(($1),4)
+  and de_continent = left(($2),2)
+  GROUP BY clustertable.country;
+  $BODY$
+  LANGUAGE sql VOLATILE
+  COST 100
+  ROWS 1000;
+ALTER FUNCTION cluster.country_count(text, text)
+  OWNER TO postgres;
+
+  
+  
+CREATE OR REPLACE FUNCTION cluster.cumul_spot_count(
+    IN de_continent text,
+    OUT spot_count bigint,
+    OUT "day/hour" text)
+  RETURNS SETOF record AS
+$BODY$
+ SELECT count(DISTINCT clustertable.dxcall) AS spot_count,
+    to_char(clustertable.insert_time, 'dd/HH24'::text) AS "day/hour"
+   FROM cluster.clustertable
+  WHERE (now() - clustertable.insert_time::timestamp with time zone) < '48:00:00'::interval
+  and de_continent = left(($1),2)
+  GROUP BY to_char(clustertable.insert_time, 'dd/HH24'::text)
+  ORDER BY to_char(clustertable.insert_time, 'dd/HH24'::text);
+
+  $BODY$
+  LANGUAGE sql VOLATILE
+  COST 100
+  ROWS 1000;
+ALTER FUNCTION cluster.cumul_spot_count(text)
+  OWNER TO postgres;
+

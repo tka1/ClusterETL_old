@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    
+  <head>
+          
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+      <script type="text/javascript" src="js/fusioncharts.js"></script>
+<script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
+      <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
+    <script src="cluster_controller_de_eu.js"></script> 
+      <link href="/style/style.css" type="text/css" rel="stylesheet" />
+
+
+    </head>
+    
+<body ng-app="myApp" ng-controller="timecontrl"  >
+
+  
+	
+       
+		<div class="content">
+            <div class="header">
+             <h1 class="topH1"> DX cluster Dashboard, EU</h1>
+                </div>
+			
+		<div class="stuff">
+	
+
+  <div >
+             <button ng-click="start()">Start</button>
+ <button ng-click="stop()">Stop</button>
+         .........count = <b ng-bind="count"></b>
+    <p> {{clock}}</p>
+      
+       <table class="htable">
+   <tr>
+      <th>SPOT COUNT FROM LAST 6 HOUR </th>
+      <th>SPOT COUNT/BAND (LAST HOUR) </th>
+   </tr>
+      </table>
+     
+               <div class="float" fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{cumul}}" ></div>
+     
+  
+        <div fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{myDataSource}}" ></div>
+     
+            <table class="htable">
+   <tr>
+      <th>COUNTRY COUNT FROM LAST HOUR </th>
+      
+   </tr>
+      </table>
+     
+    
+           <div fusioncharts width="900" height="400" type="pie3d" chart="{{attrs}}", datasource="{{greeting}}" ></div>
+    </div>
+       
+
+    <div >
+                                 
+    <table class="tftable">
+   <tr>
+      <th>Count</th>
+      <th>band</th>
+   </tr>
+   
+   <tr ng-repeat = "d in bandcount.data">
+      <td>{{ d.value  }}</td>
+      <td>{{ d.label }}</td>
+   </tr>
+</table>
+           
+	               
+    <table class="tftable">
+   <tr>
+      <th>Count</th>
+      <th>Country</th>
+   </tr>
+   
+   <tr ng-repeat = "d in greeting.data">
+      <td>{{ d.value  }}</td>
+      <td>{{ d.label }}</td>
+   </tr>
+</table>
+        
+      
+        
+        
+        
+
+        
+		</div> 
+     </div> <!-- content -->
+  
+  
+</div><!-- content -->
+      
+        </body>
+    
+    
+       
+      
+</body>
+</html>
