@@ -1,3 +1,7 @@
+package etl;
+
+
+
 import java.io.*;
 
 import java.util.TimeZone;
@@ -210,6 +214,7 @@ public class ClusterEtl
                                                    
                                                       time = response.substring(70, response.length()).trim();
                                                       String mode = response.substring((response.length()-16),(response.length()-7)).trim();
+                                                      String info = response.substring(38,(response.length()-7)).trim();
                                                       
                                                       //System.out.println(mode);
                                                       
@@ -330,7 +335,7 @@ public class ClusterEtl
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
                                                          
-                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent, info) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, clusteraddress + ":" + iport);
                                                           pst.setString(2, decall);
@@ -343,6 +348,7 @@ public class ClusterEtl
                                                           pst.setString(9, mode);
                                                           pst.setString(10, finaldecontinent);
                                                           pst.setString(11, finaldxcontinent);
+                                                          pst.setString(12, info);
                                                           pst.executeUpdate();
 
 

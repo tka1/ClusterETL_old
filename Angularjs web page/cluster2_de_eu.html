@@ -32,6 +32,29 @@
              <button ng-click="start()">Start</button>
  <button ng-click="stop()">Stop</button>
          .........count = <b ng-bind="count"></b>
+   <!--Cluster: <input type="text" id="cluster" value="localhost:7300">-->
+      
+<select id="clusters">
+ <option value="telnet.reversebeacon.net:7000">reversebeacon</option>
+ <option value="ham.connect.fi:7300">ham.connect.fi</option>
+ <option value="localhost:7301">OH2BBT CW cluster</option>
+ </select>
+      
+      <select id="de_continent">
+ <option value="EU">EU</option>
+ <option value="NA">NA</option>
+ <option value="AS">AS</option>
+          <option value="SA">SA</option>
+          <option value="OC">OC</option>
+ </select>
+      
+            <select id="mode">
+ <option value=RTTY>RTTY</option>
+ <option value="%WPM">CW</option>
+ <option value="PSK%">PSK</option>
+           </select>
+      
+
     <p> {{clock}}</p>
       
        <table class="htable">
@@ -41,7 +64,7 @@
    </tr>
       </table>
      
-               <div class="float" fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{cumul}}" ></div>
+               <div class="label" fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{cumul}}" ></div>
      
   
         <div fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{myDataSource}}" ></div>

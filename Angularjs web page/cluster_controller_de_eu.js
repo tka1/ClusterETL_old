@@ -1,5 +1,8 @@
 var app = angular.module("myApp",["ng-fusioncharts"])
+//var clusternameInput = element(by.binding('cluster.address'));
+
 app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
+
       $scope.attrs = {
         startingangle: "120",
         showlabels: "0",
@@ -36,8 +39,17 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
                    
     $scope.count = 0;
     $scope.ajaxPeriodicall = function() {
-      var  url = "http://localhost:8081/countrycount_continent?decont='EU'";
-     
+          var cluster = document.getElementById("clusters").value;
+        var de_continent = document.getElementById("de_continent").value;
+        var mode = document.getElementById("mode").value;
+      var  url = "http://192.168.1.34:8081/countrycount?id='";
+       
+
+
+        url = url + cluster + "'";
+        url = url+ "&decont='" + de_continent +"'";
+        url = url + "&mode='" + mode + "'";
+   
       console.log(url);
         $http.get(url).
          success(function(data, status, headers, config) {
@@ -52,7 +64,10 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
          }); 
         
       
-      url2 = "http://localhost:8081/bandcount_continent?decont='EU'";
+     var url2 = "http://192.168.1.34:8081/bandcount?id='";
+        url2 = url2 + cluster + "'";
+            url2 = url2+ "&decont='" + de_continent + "'";
+        console.log(url2);
            $http.get(url2).
          success(function(data, status, headers, config) {
          $scope.bandcount = data;
@@ -65,12 +80,17 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
                         
          });
        
-      url3 = "http://localhost:8081/cumul_continent?decont='EU'";
+    var url3 = "http://192.168.1.34:8081/cumul?id='";
+      url3 = url3 + cluster + "'";
+        url3 = url3+ "&decont='" + de_continent + "'";
+         console.log(url3);
+        //console.log(cluster.value);
               $http.get(url3).
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
             $scope.cumul = data;
+                 
             
           
             
@@ -81,7 +101,11 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
     $scope.start = function() {
         
         
-       $scope.myCall = $interval($scope.ajaxPeriodicall, 5000);        
+       $scope.myCall = $interval($scope.ajaxPeriodicall, 7000);    
+           
+        
+
+
     };
 
     $scope.stop = function() {
