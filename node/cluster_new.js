@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://postgres:xxxxxx@localhost:5432/postgres";
+var conString = "postgres://postgres:xxxxxxx@localhost:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -54,12 +54,15 @@ res.setHeader("Access-Control-Allow-Origin", "*");
 res.setHeader("Access-Control-Allow-Origin", "*");
    /*console.log("All query strings: " + JSON.stringify(req.query));*/
     var id2 = req.query.id;
-    var de_cont = req.query.decont        
+    var de_cont = req.query.decont  
+    var mode = req.query.mode;
     //  console.log(id2);
  var query = 'SELECT band as label, kountti as value from cluster.band_count('
  query = query + id2;
-     query = query +','
-     query = query + de_cont
+     query = query +',';
+     query = query + de_cont;
+     query = query +",";
+     query = query + mode;
      
      query = query + ') order by 1 desc';
  console.log(query);
@@ -86,12 +89,15 @@ res.setHeader("Access-Control-Allow-Origin", "*");
 res.setHeader("Access-Control-Allow-Origin", "*");
    /*console.log("All query strings: " + JSON.stringify(req.query));*/
     var id2 = req.query.id;
-    var de_cont = req.query.decont 
+    var de_cont = req.query.decont; 
+    var mode = req.query.mode;
      // console.log(id2);
  var query = 'SELECT "day/hour" as label, spot_count as value from cluster.cumul_spot_count('
  query = query + id2;
      query = query +','
-     query = query + de_cont
+     query = query + de_cont;
+     query = query +',';
+     query = query + mode;
      query = query +') ';
  console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/

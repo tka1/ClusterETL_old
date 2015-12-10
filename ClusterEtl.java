@@ -1,7 +1,3 @@
-package etl;
-
-
-
 import java.io.*;
 
 import java.util.TimeZone;
@@ -179,7 +175,7 @@ public class ClusterEtl
                            while ((response = s_in.readLine()) != null) 
                            {				{
                            
-                                                      System.out.println( response );
+                                                      //System.out.println( response );
                                                      // write line
                                                       clusterTextArea.append(response + "\n");
                                                       //focus to last line
@@ -201,20 +197,25 @@ public class ClusterEtl
                                                       String country_2 = country.Search(dxcall);
                                                       String dxcontinent = country_2.substring((country_2.length()-2));
                                                       String finaldxcontinent = dxcontinent.replace("ll","");
-                                                      System.out.println(dxcall + "  " +country_2);
+                                                      //System.out.println(dxcall + "  " +country_2);
                                                       
                                                       String de_continent = country.Search(decall);
                                                       String decontinent = de_continent.substring((de_continent.length()-2));
                                                       String finaldecontinent = decontinent.replace("ll","");
-                                                      System.out.println("de continent  " + finaldecontinent);
-                                                      System.out.println("dx continent  " + finaldxcontinent);
-                                                      double freq = Double.parseDouble(response.substring(17, 25));
-                                                      S_N = response.substring(40, 43).trim();
+                                                      //System.out.println("de continent  " + finaldecontinent);
+                                                      //System.out.println("dx continent  " + finaldxcontinent);
+                                                      double freq = Double.parseDouble(response.substring(16, 25));
+                                                     // S_N = response.substring(40, 43).trim();
+                                                      
+                                                      
                                                       //S_N = response.substring(46, 49).trim();
                                                    
                                                       time = response.substring(70, response.length()).trim();
                                                      // String mode = response.substring((response.length()-16),(response.length()-7)).trim();
                                                       String info = response.substring(38,(response.length()-7)).trim();
+                                                      S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB")-1)).trim();
+                                                     //System.out.println(info.indexOf("dB"));
+                                                      //System.out.println(S_N);
                                                       
                                                       //System.out.println(mode);
                                                       
@@ -226,6 +227,7 @@ public class ClusterEtl
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC")); 
                                                       String date = simpleDateFormat.format(new Date());
                                                       String datetime = date + " " + newtime;
+                                                      
                                                       String mode = null;
                                                       if (info.matches("(.*)WPM(.*)")) {
                                                     	   mode ="CW";
@@ -242,7 +244,7 @@ public class ClusterEtl
                                                       if (info.matches("(.*)PSK100(.*)")) {
                                                    	   mode ="PSK100";
                                                      }
-                                                      		System.out.println(info.matches("(.*)WPM(.*)")) ;
+                                                      		//System.out.println(info.matches("(.*)WPM(.*)")) ;
                                                       		
                                                       		
                                                       		
@@ -344,14 +346,14 @@ public class ClusterEtl
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Helsinki")); 
                                                       java.util.Date newdate = sdf.parse(datetime);
                                                       java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
-                                                      System.out.println(newdate);
-                                                      System.out.println(datetime);
-                                                      System.out.println(sqlDate);
-                                                    //date time format change
+                                                      //System.out.println(newdate);
+                                                      //System.out.println(datetime);
+                                                      //System.out.println(sqlDate);
+                                                      //date time format change
                                                   
-                                                      String url = "jdbc:postgresql://192.168.1.34/postgres";
+                                                      String url = "jdbc:postgresql://localhost/postgres";
                                                       String user = "postgres";
-                                                      String password = "xxxxxx";
+                                                      String password = "Powerday1!";
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
