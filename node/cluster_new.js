@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://postgres:Powerday1!@localhost:5432/postgres";
+var conString = "postgres://postgres:xxxx!@localhost:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
