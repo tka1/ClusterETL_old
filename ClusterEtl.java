@@ -330,7 +330,7 @@ public class ClusterEtl
                                                   
                                                       String url = "jdbc:postgresql://localhost/postgres";
                                                       String user = "postgres";
-                                                      String password = "Powerday1!";
+                                                      String password = "xxxxxxx";
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
