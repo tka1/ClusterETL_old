@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://postgres:xxxxxxx@localhost:5432/postgres";
+var conString = "postgres://postgres:Powerday1!@localhost:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -99,6 +99,34 @@ res.setHeader("Access-Control-Allow-Origin", "*");
      query = query +',';
      query = query + mode;
      query = query +') ';
+ console.log(query);
+  /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
+    client.query(query,function(err, result) {
+    if(err) {
+      return console.error('error running query', err);
+    }
+        var querydata = {};
+            var data = []
+            querydata.data = data;
+            var obj = result.rows;
+      for (i = 0; i < obj.length; i++) {
+           querydata.data.push(obj[i]);
+      }
+        console.log(querydata);
+      retdata = 
+      res.json(querydata);
+  });
+}); 
+    
+                     app.get('/rows', function (req, res, response) {
+res.setHeader("Access-Control-Allow-Origin", "*");
+   /*console.log("All query strings: " + JSON.stringify(req.query));*/
+    var id = req.query.id;
+   
+     // console.log(id2);
+ var query = 'SELECT * from cluster.latestrows('
+ query = query + id;
+      query = query +') ';
  console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
     client.query(query,function(err, result) {

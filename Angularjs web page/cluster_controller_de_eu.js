@@ -97,6 +97,22 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
           
             
          }); 
+        
+         var url4 = "http://localhost:8081/rows?id='";
+      url4 = url4 + cluster + "'";
+        
+         console.log(url4);
+        //console.log(cluster.value);
+              $http.get(url4).
+         success(function(data, status, headers, config) {
+            // this callback will be called asynchronously
+            // when the response is available
+            $scope.rows = data;
+                 
+            
+          
+            
+         }); 
                     
     };
 

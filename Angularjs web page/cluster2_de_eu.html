@@ -108,6 +108,30 @@
    </tr>
 </table>
         
+         <table class="tftable">
+   <tr>
+      <th>decall</th>
+      <th>dxcall</th>
+       <th>country</th>
+      <th>freq</th>
+       <th>band</th>
+      <th>mode</th>
+       <th>sig_noise</th>
+      <th>datetime</th>
+   </tr>
+   
+   <tr ng-repeat = "d in rows.data">
+      <td>{{ d.decall  }}</td>
+      <td>{{ d.dxcall }}</td>
+          <td>{{ d.country  }}</td>
+      <td>{{ d.freq }}</td>
+          <td>{{ d.band  }}</td>
+      <td>{{ d.mode }}</td>
+          <td>{{ d.sig_noise  }}</td>
+      <td>{{ d.datetime }}</td>
+   </tr>
+</table>
+        
       
         
         
