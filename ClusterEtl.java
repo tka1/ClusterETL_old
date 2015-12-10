@@ -213,7 +213,7 @@ public class ClusterEtl
                                                       //S_N = response.substring(46, 49).trim();
                                                    
                                                       time = response.substring(70, response.length()).trim();
-                                                      String mode = response.substring((response.length()-16),(response.length()-7)).trim();
+                                                     // String mode = response.substring((response.length()-16),(response.length()-7)).trim();
                                                       String info = response.substring(38,(response.length()-7)).trim();
                                                       
                                                       //System.out.println(mode);
@@ -226,6 +226,27 @@ public class ClusterEtl
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC")); 
                                                       String date = simpleDateFormat.format(new Date());
                                                       String datetime = date + " " + newtime;
+                                                      String mode = null;
+                                                      if (info.matches("(.*)WPM(.*)")) {
+                                                    	   mode ="CW";
+                                                      }
+                                                      if (info.matches("(.*)RTTY(.*)")) {
+                                                   	   mode ="RTTY";
+                                                     }
+                                                      if (info.matches("(.*)PSK31(.*)")) {
+                                                   	   mode ="PSK31";
+                                                     }
+                                                      if (info.matches("(.*)PSK63(.*)")) {
+                                                   	   mode ="PSK63";
+                                                     }
+                                                      if (info.matches("(.*)PSK100(.*)")) {
+                                                   	   mode ="PSK100";
+                                                     }
+                                                      		System.out.println(info.matches("(.*)WPM(.*)")) ;
+                                                      		
+                                                      		
+                                                      		
+                                                      
                                                       if (freq >= 1800 && freq <= 1900 ) {
                                                     	  band = "160M";
                                                       }
@@ -328,9 +349,9 @@ public class ClusterEtl
                                                       System.out.println(sqlDate);
                                                     //date time format change
                                                   
-                                                      String url = "jdbc:postgresql://localhost/postgres";
+                                                      String url = "jdbc:postgresql://192.168.1.34/postgres";
                                                       String user = "postgres";
-                                                      String password = "xxxxxxx";
+                                                      String password = "Powerday1!";
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
