@@ -1,7 +1,3 @@
-package etl;
-
-
-
 import java.io.*;
 
 import java.util.TimeZone;
@@ -49,6 +45,10 @@ public class ClusterEtl
         //int iport = Integer.parseInt(port);
     	String clusteraddress = null;
     	String call = null;
+    	String Sqluser = null;
+    	String Sqlpass = null;
+    	String Postgresql_address = null;
+    	String DataBase = null;
     	int iport = 0;
     	File configFile = new File("config.properties");
 
@@ -60,7 +60,12 @@ public class ClusterEtl
     		 clusteraddress = props.getProperty("address");
     		String port = props.getProperty("port");
     		call = props.getProperty("call");
-    		  iport = Integer.parseInt(port);
+    		iport = Integer.parseInt(port);
+    		Postgresql_address = props.getProperty("postgresql_address");
+    		DataBase = props.getProperty("postgresql_db");
+    		Sqluser = props.getProperty("postgresql_user");
+    		Sqlpass = props.getProperty("postgresql_password");
+    		
 
     		System.out.print("Host name is: " + clusteraddress);
     		System.out.print("  port is: " + port);
@@ -179,7 +184,7 @@ public class ClusterEtl
                            while ((response = s_in.readLine()) != null) 
                            {				{
                            
-                                                      System.out.println( response );
+                                                      //System.out.println( response );
                                                      // write line
                                                       clusterTextArea.append(response + "\n");
                                                       //focus to last line
@@ -356,9 +361,10 @@ public class ClusterEtl
                                                       //System.out.println(sqlDate);
                                                       //date time format change
                                                   
-                                                      String url = "jdbc:postgresql://192.168.1.34/postgres";
-                                                      String user = "postgres";
-                                                      String password = "xxxxx";
+                                                      String url = "jdbc:postgresql://";
+                                                      url = url + Postgresql_address + "/" + DataBase ;
+                                                      String user = Sqluser;
+                                                      String password = Sqlpass;
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);

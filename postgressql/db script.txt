@@ -1,3 +1,7 @@
+CREATE SCHEMA cluster
+  AUTHORIZATION postgres;
+
+
 CREATE TABLE cluster.clustertable
 CREATE TABLE cluster.clustertable
 (
@@ -154,3 +158,16 @@ SELECT decall,dxcall,country,freq,band,mode,sig_noise,datetime
 ALTER FUNCTION cluster.latestrows(text)
   OWNER TO postgres;
 
+
+  
+  CREATE ROLE cluster LOGIN
+   PASSWORD 'xxxxxxxx'
+  NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
+
+GRANT  USAGE   ON SCHEMA cluster  TO cluster;
+GRANT SELECT, UPDATE, INSERT, TRUNCATE, DELETE ON TABLE cluster.clustertable TO cluster;
+grant execute on function cluster.band_count(text, text, text) to cluster;
+grant execute on function cluster.country_count(text, text, text) to cluster;
+grant execute on function cluster.cumul_spot_count(text, text, text) to cluster;
+grant execute on function cluster.latestrows(text) to cluster;
+GRANT USAGE, SELECT ON SEQUENCE cluster.clustertable_id_seq TO cluster;

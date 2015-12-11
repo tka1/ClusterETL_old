@@ -9,7 +9,7 @@
       <script type="text/javascript" src="js/fusioncharts.js"></script>
 <script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
       <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
-    <script src="cluster_controller_de_eu.js"></script> 
+    <script src="dashboard_controller.js"></script> 
       <link href="/style/style.css" type="text/css" rel="stylesheet" />
 
 
@@ -22,7 +22,7 @@
        
 		<div class="content">
             <div class="header">
-             <h1 class="topH1"> DX cluster Dashboard, EU</h1>
+             <h1 class="topH1"> DX cluster Dashboard</h1>
                 </div>
 			
 		<div class="stuff">
@@ -82,6 +82,30 @@
        
 
     <div >
+        
+        <table class="tftable">
+   <tr>
+      <th>decall</th>
+      <th>dxcall</th>
+       <th>country</th>
+      <th>freq</th>
+       <th>band</th>
+      <th>mode</th>
+       <th>snr</th>
+      <th>datetime</th>
+   </tr>
+   
+   <tr ng-repeat = "d in rows.data">
+      <td>{{ d.decall  }}</td>
+      <td>{{ d.dxcall }}</td>
+          <td>{{ d.country  }}</td>
+      <td>{{ d.freq }}</td>
+          <td>{{ d.band  }}</td>
+      <td>{{ d.mode }}</td>
+          <td>{{ d.sig_noise  }}</td>
+      <td>{{ d.datetime }}</td>
+   </tr>
+</table>
                                  
     <table class="tftable">
    <tr>
