@@ -18,6 +18,8 @@ CREATE TABLE cluster.clustertable
   mode character varying,
   de_continent character(2),
   dx_continent character(2),
+   info character varying,
+  
   CONSTRAINT clustertable_pkey PRIMARY KEY (id)
 )
 
@@ -27,7 +29,17 @@ WITH (
 ALTER TABLE cluster.clustertable
   OWNER TO postgres;
 GRANT ALL ON TABLE cluster.clustertable TO postgres;
-GRANT SELECT, UPDATE, INSERT, TRUNCATE, DELETE ON TABLE cluster.clustertable TO public;
+GRANT SELECT, UPDATE, INSERT, TRUNCATE, DELETE ON TABLE cluster.clustertable TO cluster;
+
+-- Index: cluster.title_ind
+
+-- DROP INDEX cluster.title_ind;
+
+CREATE INDEX title_ind
+  ON cluster.clustertable
+  USING btree
+  (title COLLATE pg_catalog."default");
+
 
 CREATE OR REPLACE VIEW cluster.band_count AS 
  SELECT count(DISTINCT clustertable.dxcall) AS kountti,
