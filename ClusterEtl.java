@@ -1,3 +1,7 @@
+package etl;
+
+
+
 import java.io.*;
 
 import java.util.TimeZone;
@@ -124,7 +128,7 @@ public class ClusterEtl
                            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
    // write header if file not exits
         if(newfile) {
-        	 bufferWritter.write("decall;dxcall;freq;band;S/N;datetime;country;continent");
+        	 bufferWritter.write("decall;dxcall;freq;band;S/N;datetime;country;continent;mode;decontinent;dxcontinent");
              bufferWritter.newLine();
              bufferWritter.flush();
         }
@@ -175,7 +179,7 @@ public class ClusterEtl
                            while ((response = s_in.readLine()) != null) 
                            {				{
                            
-                                                      //System.out.println( response );
+                                                      System.out.println( response );
                                                      // write line
                                                       clusterTextArea.append(response + "\n");
                                                       //focus to last line
@@ -213,7 +217,8 @@ public class ClusterEtl
                                                       time = response.substring(70, response.length()).trim();
                                                      // String mode = response.substring((response.length()-16),(response.length()-7)).trim();
                                                       String info = response.substring(38,(response.length()-7)).trim();
-                                                      S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB")-1)).trim();
+                                                      info = "  " + info;
+                                                      S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB"))).trim();
                                                      //System.out.println(info.indexOf("dB"));
                                                       //System.out.println(S_N);
                                                       
@@ -287,7 +292,7 @@ public class ClusterEtl
                                                       
                                                       
                                                 // write line to log file      
-                                                      bufferWritter.write(decall + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + date + " " + newtime + ";" + country_2);
+                                                      bufferWritter.write(decall + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + date + " " + newtime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent);
                                                       bufferWritter.newLine();
                                                       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
@@ -351,9 +356,9 @@ public class ClusterEtl
                                                       //System.out.println(sqlDate);
                                                       //date time format change
                                                   
-                                                      String url = "jdbc:postgresql://localhost/postgres";
+                                                      String url = "jdbc:postgresql://192.168.1.34/postgres";
                                                       String user = "postgres";
-                                                      String password = "xxxxx!";
+                                                      String password = "xxxxx";
                                                                                                   
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
@@ -406,7 +411,7 @@ public class ClusterEtl
                            catch (InterruptedIOException iioe)
                            {
                         	   clusterTextArea.append("Timeout occurred" + "\n");
-                        	   System.out.println ("Timeout occurred - killing connection");
+                        	   System.out.println ("Timeout occurred ");
                				//s.close();
 
                            }
