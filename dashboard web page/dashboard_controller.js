@@ -42,7 +42,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
           var cluster = document.getElementById("clusters").value;
         var de_continent = document.getElementById("de_continent").value;
         var mode = document.getElementById("mode").value;
-      var  url = "http://localhost:8081/countrycount?id='";
+      var  url = "http://192.168.1.34:8081/countrycount?id='";
        
 
 
@@ -64,7 +64,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
          }); 
         
       
-     var url2 = "http://localhost:8081/bandcount?id='";
+     var url2 = "http://192.168.1.34:8081/bandcount?id='";
         url2 = url2 + cluster + "'";
             url2 = url2+ "&decont='" + de_continent + "'";
          url2 = url2 + "&mode='" + mode + "'";
@@ -81,7 +81,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
                         
          });
        
-    var url3 = "http://localhost:8081/cumul?id='";
+    var url3 = "http://192.168.1.34:8081/cumul?id='";
       url3 = url3 + cluster + "'";
         url3 = url3+ "&decont='" + de_continent + "'";
          url3 = url3 + "&mode='" + mode + "'";
@@ -98,7 +98,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
             
          }); 
         
-         var url4 = "http://localhost:8081/rows?id='";
+         var url4 = "http://192.168.1.34:8081/rows?id='";
       url4 = url4 + cluster + "'";
         
          console.log(url4);

@@ -1,0 +1,5 @@
+decall;dxcall;freq;band;S/N;datetime;country;continent;mode;decontinent;dxcontinent
+SM6FMB-#:;UA1AML;3513.0;80M;11;2015-12-14 18:22Z;European Russia;  EU;CW;EU;EU
+HB9DCO-#:;S52FT;3501.0;80M;20;2015-12-14 18:22Z;Slovenia;  EU;CW;EU;EU
+OH6BG-#:;OK1FLK;1827.1;160M;6;2015-12-14 18:22Z;Czech Republic;  EU;CW;EU;EU
+SK3W-#:;UA1AML;3513.0;80M;36;2015-12-14 18:22Z;European Russia;  EU;CW;EU;EU

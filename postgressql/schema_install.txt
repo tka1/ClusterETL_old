@@ -162,7 +162,7 @@ SELECT decall,dxcall,country,freq,band,mode,sig_noise,datetime
    FROM cluster.clustertable
   WHERE clustertable.insert_time >= (now() - '0:05:00'::interval)
   and title = left(($1),40)
-    order by clustertable.insert_time;
+    order by clustertable.insert_time limit 30;
   $BODY$
   LANGUAGE sql VOLATILE
   COST 100

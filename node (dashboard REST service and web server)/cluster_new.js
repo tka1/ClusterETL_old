@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://postgres:xxxx!@localhost:5432/postgres";
+var conString = "postgres://cluster:Saturnus1!@localhost:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -22,7 +22,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
         var de_cont = req.query.decont;
         var mode = req.query.mode;
         //mode = "'%" + mode + "%'";
-      console.log(mode);
+     // console.log(mode);
  var query = "SELECT country as label, kountti as value from cluster.country_count(";
  query = query + id2;
          query = query +",";
@@ -30,7 +30,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
       query = query +",";
       query = query + mode;
      query = query +") order by 2";
- console.log(query);
+ //console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
     client.query(query,function(err, result) {
     if(err) {
@@ -65,7 +65,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
      query = query + mode;
      
      query = query + ') order by 1 desc';
- console.log(query);
+ //console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
     client.query(query,function(err, result) {
     if(err) {
@@ -99,7 +99,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
      query = query +',';
      query = query + mode;
      query = query +') ';
- console.log(query);
+ //console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
     client.query(query,function(err, result) {
     if(err) {
@@ -112,7 +112,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
       for (i = 0; i < obj.length; i++) {
            querydata.data.push(obj[i]);
       }
-        console.log(querydata);
+       // console.log(querydata);
       retdata = 
       res.json(querydata);
   });
@@ -127,7 +127,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
  var query = 'SELECT * from cluster.latestrows('
  query = query + id;
       query = query +') ';
- console.log(query);
+// console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
     client.query(query,function(err, result) {
     if(err) {
@@ -140,7 +140,7 @@ res.setHeader("Access-Control-Allow-Origin", "*");
       for (i = 0; i < obj.length; i++) {
            querydata.data.push(obj[i]);
       }
-        console.log(querydata);
+        //console.log(querydata);
       retdata = 
       res.json(querydata);
   });

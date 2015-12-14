@@ -1,3 +1,7 @@
+package etl;
+
+
+
 import java.io.*;
 
 import java.util.TimeZone;
@@ -108,7 +112,7 @@ public class ClusterEtl
    //Frame initialization
         
    // parameter initializations            
-        CountrySearch2 country = new CountrySearch2();       
+        CountrySearch country = new CountrySearch();       
     	String decall= null;
         String decall_trimmed= null;
         String dxcall= null;

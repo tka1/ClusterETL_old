@@ -59,8 +59,8 @@
       
        <table class="htable">
    <tr>
-      <th>SPOT COUNT FROM LAST 6 HOUR </th>
-      <th>SPOT COUNT/BAND (LAST HOUR) </th>
+      <th>DISTINCT CALLSIGNS FROM LAST 7 HOUR </th>
+      <th>DISTINCT CALLSIGNS/BAND (LAST HOUR) </th>
    </tr>
       </table>
      
@@ -71,7 +71,7 @@
      
             <table class="htable">
    <tr>
-      <th>COUNTRY COUNT FROM LAST HOUR </th>
+      <th> COUNTRIES FROM LAST HOUR </th>
       
    </tr>
       </table>
@@ -82,7 +82,12 @@
        
 
     <div >
-        
+                   <table class="htable">
+   <tr>
+      <th>ALL DX SPOTS </th>
+      
+   </tr>
+      </table>
         <table class="tftable">
    <tr>
       <th>decall</th>
@@ -103,7 +108,7 @@
           <td>{{ d.band  }}</td>
       <td>{{ d.mode }}</td>
           <td>{{ d.sig_noise  }}</td>
-      <td>{{ d.datetime }}</td>
+      <td>{{ d.insert_time }}</td>
    </tr>
 </table>
                                  
@@ -132,29 +137,7 @@
    </tr>
 </table>
         
-         <table class="tftable">
-   <tr>
-      <th>decall</th>
-      <th>dxcall</th>
-       <th>country</th>
-      <th>freq</th>
-       <th>band</th>
-      <th>mode</th>
-       <th>sig_noise</th>
-      <th>datetime</th>
-   </tr>
-   
-   <tr ng-repeat = "d in rows.data">
-      <td>{{ d.decall  }}</td>
-      <td>{{ d.dxcall }}</td>
-          <td>{{ d.country  }}</td>
-      <td>{{ d.freq }}</td>
-          <td>{{ d.band  }}</td>
-      <td>{{ d.mode }}</td>
-          <td>{{ d.sig_noise  }}</td>
-      <td>{{ d.datetime }}</td>
-   </tr>
-</table>
+         
         
       
         
