@@ -100,6 +100,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         
          var url4 = "http://192.168.1.34:8081/rows?id='";
       url4 = url4 + cluster + "'";
+        url4 = url4+ "&decont='" + de_continent + "'";
         
          console.log(url4);
         //console.log(cluster.value);

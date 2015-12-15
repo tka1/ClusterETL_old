@@ -148,6 +148,7 @@ ALTER FUNCTION cluster.cumul_spot_count(text, text, text)
   
   CREATE OR REPLACE FUNCTION cluster.latestrows(
     IN title text,
+    IN de_continent text,
     OUT decall text,
     OUT dxcall text,
     OUT country text,
@@ -160,16 +161,19 @@ ALTER FUNCTION cluster.cumul_spot_count(text, text, text)
 $BODY$
 SELECT decall,dxcall,country,freq,band,mode,sig_noise,datetime
    FROM cluster.clustertable
-  WHERE clustertable.insert_time >= (now() - '0:05:00'::interval)
+  WHERE clustertable.insert_time >= (now() - '0:01:00'::interval)
   and title = left(($1),40)
-    order by clustertable.insert_time limit 30;
+  and de_continent = left(($2),2)
+    order by clustertable.insert_time;
   $BODY$
   LANGUAGE sql VOLATILE
   COST 100
   ROWS 1000;
 ALTER FUNCTION cluster.latestrows(text)
   OWNER TO postgres;
-
+GRANT EXECUTE ON FUNCTION cluster.latestrows(text) TO public;
+GRANT EXECUTE ON FUNCTION cluster.latestrows(text) TO postgres;
+GRANT EXECUTE ON FUNCTION cluster.latestrows(text) TO cluster;
 
   
   CREATE ROLE cluster LOGIN
