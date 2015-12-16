@@ -123,14 +123,20 @@ res.setHeader("Access-Control-Allow-Origin", "*");
    /*console.log("All query strings: " + JSON.stringify(req.query));*/
     var id = req.query.id;
     var de_cont = req.query.decont; 
+    var mode = req.query.mode; 
+   var dx_from = req.query.dxfrom; 
    
-      console.log(de_cont);
+      console.log(dx_from);
  var query = 'SELECT * from cluster.latestrows('
  query = query + id;
     query = query +','
      query = query + de_cont;
+        query = query +','
+        query = query + mode;
+         query = query +','
+         query = query + dx_from;
       query = query +') ';
-// console.log(query);
+ console.log(query);
   /*client.query('SELECT country as label, kountti as value from cluster.country_count order by 2 desc ',*/
     client.query(query,function(err, result) {
     if(err) {

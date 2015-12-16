@@ -149,6 +149,8 @@ ALTER FUNCTION cluster.cumul_spot_count(text, text, text)
   CREATE OR REPLACE FUNCTION cluster.latestrows(
     IN title text,
     IN de_continent text,
+    IN mode text,
+    IN dx_continent text,
     OUT decall text,
     OUT dxcall text,
     OUT country text,
@@ -156,24 +158,24 @@ ALTER FUNCTION cluster.cumul_spot_count(text, text, text)
     OUT band text,
     OUT mode text,
     OUT sig_noise text,
-    OUT datetime timestamp without time zone)
+    OUT insert_time timestamp without time zone)
   RETURNS SETOF record AS
 $BODY$
-SELECT decall,dxcall,country,freq,band,mode,sig_noise,datetime
+SELECT decall,dxcall,country,freq,band,mode,sig_noise,insert_time
    FROM cluster.clustertable
-  WHERE clustertable.insert_time >= (now() - '0:01:00'::interval)
+  WHERE clustertable.insert_time >= (now() - '0:10:00'::interval)
   and title = left(($1),40)
   and de_continent = left(($2),2)
-    order by clustertable.insert_time;
+    and mode = left(($3),6)
+    and dx_continent !=( left(($4),2))
+    order by clustertable.insert_time limit 30;
   $BODY$
   LANGUAGE sql VOLATILE
   COST 100
   ROWS 1000;
-ALTER FUNCTION cluster.latestrows(text)
+ALTER FUNCTION cluster.latestrows(text, text, text, text)
   OWNER TO postgres;
-GRANT EXECUTE ON FUNCTION cluster.latestrows(text) TO public;
-GRANT EXECUTE ON FUNCTION cluster.latestrows(text) TO postgres;
-GRANT EXECUTE ON FUNCTION cluster.latestrows(text) TO cluster;
+
 
   
   CREATE ROLE cluster LOGIN
@@ -185,5 +187,5 @@ GRANT SELECT, UPDATE, INSERT, TRUNCATE, DELETE ON TABLE cluster.clustertable TO 
 grant execute on function cluster.band_count(text, text, text) to cluster;
 grant execute on function cluster.country_count(text, text, text) to cluster;
 grant execute on function cluster.cumul_spot_count(text, text, text) to cluster;
-grant execute on function cluster.latestrows(text) to cluster;
+grant execute on function cluster.latestrows(text, text, text, text) to cluster;
 GRANT USAGE, SELECT ON SEQUENCE cluster.clustertable_id_seq TO cluster;

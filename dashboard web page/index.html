@@ -35,25 +35,29 @@
    <!--Cluster: <input type="text" id="cluster" value="localhost:7300">-->
       
 <select id="clusters">
+    <option value=>Select cluster</option>
  <option value="telnet.reversebeacon.net:7000">reversebeacon</option>
  <option value="ham.connect.fi:7300">ham.connect.fi</option>
  <option value="localhost:7301">OH2BBT CW cluster</option>
  </select>
       
       <select id="de_continent">
- <option value="EU">EU</option>
- <option value="NA">NA</option>
- <option value="AS">AS</option>
-          <option value="SA">SA</option>
-          <option value="OC">OC</option>
+                <option value=>Select spotter continent</option>
+                <option value="EU">EU</option>
+                <option value="NA">NA</option>
+                <option value="AS">AS</option>
+                <option value="SA">SA</option>
+                <option value="OC">OC</option>
  </select>
       
             <select id="mode">
- <option value=RTTY>RTTY</option>
- <option value=CW>CW</option>
- <option value=PSK31>PSK31</option>
+                <option value=>Select mode</option>
+                    <option value=CW>CW</option>
+                    <option value=RTTY>RTTY</option>
+                    <option value=PSK31>PSK31</option>
            </select>
       
+                  
 
     <p> {{clock}}</p>
       
@@ -84,7 +88,13 @@
     <div >
                    <table class="htable">
    <tr>
-      <th>ALL DX SPOTS </th>
+      <th><select id="dx">
+          <option value="">select continent</option>
+          <option value="ALL">ALL</option>
+          <option value="DX">DX</option>
+ 
+ 
+           </select> </th>
       
    </tr>
       </table>
@@ -108,7 +118,7 @@
           <td>{{ d.band  }}</td>
       <td>{{ d.mode }}</td>
           <td>{{ d.sig_noise  }}</td>
-      <td>{{ d.datetime }}</td>
+      <td>{{ d.insert_time }}</td>
    </tr>
 </table>
                                  
