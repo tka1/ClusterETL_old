@@ -42,6 +42,9 @@ public class ClusterEtl
 	
     public static void main(String[] args) throws IOException, ParseException 
     {
+    	int timeOutnumber = 0;
+    	// loop structure for timeout cases. 
+    	 while (true){
     	
     	//get address & port from input dialog
         //String clusteraddress = JOptionPane.showInputDialog(null, "Enter  cluster address " );
@@ -85,7 +88,7 @@ public class ClusterEtl
     //Frame initialization
     	JButton bChange ;
         JFrame.setDefaultLookAndFeelDecorated(true);
-        JFrame frame = new JFrame(clusteraddress);
+        JFrame frame = new JFrame(clusteraddress +"    Timeout counter= " + timeOutnumber);
         // Setting the width and height of frame
         frame.setSize(700, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,10 +104,10 @@ public class ClusterEtl
         scrollPane.setPreferredSize(new Dimension(700, 700));
         panel.setLayout(new FlowLayout());
      // construct a Button
-        bChange = new JButton("Click Me!"); 
+       // bChange = new JButton("Click Me!"); 
       
 
-        panel.add( bChange );  
+        //panel.add( bChange );  
 
         //panel.add(clusterTextArea);
         panel.add(scrollPane);
@@ -158,6 +161,8 @@ public class ClusterEtl
             s_in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         }
         
+      
+        
         //Host not found
         catch (UnknownHostException e) 
         {
@@ -166,13 +171,13 @@ public class ClusterEtl
         }
     	try
 		{	
-			s.setSoTimeout (30000);
+			s.setSoTimeout (8000);
 		}
 		catch (SocketException se)
 		{
 			System.err.println ("Unable to set socket option SO_TIMEOUT");
 		}
-        
+     
         //Send message to server
        
                            String message = call;
@@ -182,7 +187,7 @@ public class ClusterEtl
                                                       
                            //Get response from server
                            String response;
-                           while (true){
+                          // while (true){
                            try
                            {
                            while ((response = s_in.readLine()) != null) 
@@ -229,7 +234,7 @@ public class ClusterEtl
                                                       info = "  " + info;
                                                       S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB"))).trim();
                                                      //System.out.println(info.indexOf("dB"));
-                                                      //System.out.println(S_N);
+                                                      //System.out.println(time);
                                                       
                                                       //System.out.println(mode);
                                                       
@@ -420,11 +425,48 @@ public class ClusterEtl
                            }
                            catch (InterruptedIOException iioe)
                            {
+                        	  timeOutnumber++;
+                        	   System.out.println (timeOutnumber);
                         	   clusterTextArea.append("Timeout occurred" + "\n");
                         	   System.out.println ("Timeout occurred ");
-               				//s.close();
+                        	   //close the i/o streams
+                               s_out.close();
+                               s_in.close();
+                                                                                      
+                               //close the socket
+                              s.close();
+                          	   bufferWritter.close();
+                        	   frame.setVisible(false);
+                        	    frame.dispose();
+                        	    
 
                            }
+                           catch (SocketException iioe)
+                           {
+                        	  timeOutnumber++;
+                        	   System.out.println (timeOutnumber);
+                        	   clusterTextArea.append("SocketException" + "\n");
+                        	   clusterTextArea.append("wait" + "\n");
+                        	   System.out.println ("SocketException ");
+                        	   //close the i/o streams
+                               s_out.close();
+                               s_in.close();
+                                                                                      
+                               //close the socket
+                              s.close();
+                          	   bufferWritter.close();
+                          	   System.out.println("30 second wait");
+                          	 try {
+                          		  Thread.sleep(30000L);	  // 30 second
+                          		}
+                          		catch (Exception e) {}
+                        	   frame.setVisible(false);
+                        	    frame.dispose();
+                        	    
+
+                           }
+                           
+                           
                           
                            //close the i/o streams
                            //s_out.close();
@@ -442,9 +484,6 @@ public class ClusterEtl
                            }
                            }
     
-    
+   // }
+ 
     }
-    
-   
-
-
