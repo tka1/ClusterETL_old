@@ -171,7 +171,7 @@ public class ClusterEtl
         }
     	try
 		{	
-			s.setSoTimeout (8000);
+			s.setSoTimeout (60000);
 		}
 		catch (SocketException se)
 		{
@@ -266,7 +266,7 @@ public class ClusterEtl
                                                       		//System.out.println(info.matches("(.*)WPM(.*)")) ;
                                                       		
                                                       		
-                                                      		
+                                                       band = null;	
                                                       
                                                       if (freq >= 1800 && freq <= 1900 ) {
                                                     	  band = "160M";
@@ -429,6 +429,7 @@ public class ClusterEtl
                         	   System.out.println (timeOutnumber);
                         	   clusterTextArea.append("Timeout occurred" + "\n");
                         	   System.out.println ("Timeout occurred ");
+                        	   System.out.println (iioe);
                         	   //close the i/o streams
                                s_out.close();
                                s_in.close();
