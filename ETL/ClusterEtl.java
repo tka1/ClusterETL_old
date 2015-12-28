@@ -2,6 +2,8 @@ package etl;
 
 
 
+
+
 import java.io.*;
 
 import java.util.TimeZone;
@@ -121,7 +123,7 @@ public class ClusterEtl
         String dxcall= null;
         //Double freq = null;
         String S_N = null;
-        String time = null;
+        //String time = null;
         String band = null;
         boolean newfile = false;
         
@@ -228,7 +230,7 @@ public class ClusterEtl
                                                       
                                                       //S_N = response.substring(46, 49).trim();
                                                    
-                                                      time = response.substring(70, response.length()).trim();
+                                                      //time = response.substring(70, response.length()).trim();
                                                      // String mode = response.substring((response.length()-16),(response.length()-7)).trim();
                                                       String info = response.substring(38,(response.length()-7)).trim();
                                                       info = "  " + info;
@@ -238,14 +240,14 @@ public class ClusterEtl
                                                       
                                                       //System.out.println(mode);
                                                       
-                                                      StringBuffer newtime = new StringBuffer(time);
-                                                      newtime.insert(2,  ":");
+                                                     // StringBuffer newtime = new StringBuffer(time);
+                                                     // newtime.insert(2,  ":");
                                                       
-                                                      String pattern = "yyyy-MM-dd";
+                                                      String pattern = "yyyy-MM-dd HH:mm";
                                                       SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC")); 
-                                                      String date = simpleDateFormat.format(new Date());
-                                                      String datetime = date + " " + newtime;
+                                                      String datetime = simpleDateFormat.format(new Date());
+                                                      //String datetime = date ;
                                                       
                                                       String mode = null;
                                                       if (info.matches("(.*)WPM(.*)")) {
@@ -306,7 +308,7 @@ public class ClusterEtl
                                                       
                                                       
                                                 // write line to log file      
-                                                      bufferWritter.write(decall + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + date + " " + newtime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent);
+                                                      bufferWritter.write(decall + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent);
                                                       bufferWritter.newLine();
                                                       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
@@ -361,14 +363,13 @@ public class ClusterEtl
                                                       PreparedStatement pst = null;
                                                       
                                                       //date time format change
-                                                      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
-                                                      simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Helsinki")); 
+                                                      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                                                      //simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Helsinki")); 
                                                       java.util.Date newdate = sdf.parse(datetime);
                                                       java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
-                                                      //System.out.println(newdate);
-                                                      //System.out.println(datetime);
-                                                      //System.out.println(sqlDate);
-                                                      //date time format change
+                                                    
+                                                      System.out.println(sqlDate);
+                                                      //date time format change end
                                                   
                                                       String url = "jdbc:postgresql://";
                                                       url = url + Postgresql_address + "/" + DataBase ;
@@ -378,7 +379,7 @@ public class ClusterEtl
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
                                                          
-                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent, info) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, clusteraddress + ":" + iport);
                                                           pst.setString(2, decall);
@@ -391,7 +392,6 @@ public class ClusterEtl
                                                           pst.setString(9, mode);
                                                           pst.setString(10, finaldecontinent);
                                                           pst.setString(11, finaldxcontinent);
-                                                          pst.setString(12, info);
                                                           pst.executeUpdate();
 
 
