@@ -118,10 +118,7 @@ public class ClusterEtl
         
    // parameter initializations            
         CountrySearch country = new CountrySearch();       
-    	String decall= null;
-        String decall_trimmed= null;
-        String dxcall= null;
-        //Double freq = null;
+    	
         String S_N = null;
         //String time = null;
         String band = null;
@@ -195,7 +192,7 @@ public class ClusterEtl
                            while ((response = s_in.readLine()) != null) 
                            {				{
                            
-                                                      //System.out.println( response );
+                                                    // System.out.println( response );
                                                      // write line
                                                       clusterTextArea.append(response + "\n");
                                                       //focus to last line
@@ -205,50 +202,28 @@ public class ClusterEtl
 
                                                                                                                                                         
                                                       if (response.startsWith("DX")) {
-                                                                                                                                                                                                                                   
-                                                      //String country2 = ScannerReadFile(dxcall);
-                                                       decall = (response.substring(5, 16));
-                                                                                  decall = decall.trim();
-                                                                                  decall_trimmed = decall.substring(0, decall.length()-1);
-                                                      //System.out.println(decall_trimmed);
-                                                      dxcall = response.substring(26, 38);
-                                                      dxcall = dxcall.trim();
-                                                      //String shortdxcall = dxcall.substring(0,4);
+                                                      //parsing columns                                                
+                                                      String decallin = (response.substring(5, 16)).trim();
+                                                      String decall_trimmed = decallin.replaceAll("[-#:]","");
+                                                      String dxcall = response.substring((response.length()-50), (response.length()-37)).trim();
                                                       String country_2 = country.Search(dxcall);
                                                       String dxcontinent = country_2.substring((country_2.length()-2));
                                                       String finaldxcontinent = dxcontinent.replace("ll","");
-                                                      //System.out.println(dxcall + "  " +country_2);
-                                                      
-                                                      String de_continent = country.Search(decall);
+                                                      String de_continent = country.Search(decall_trimmed);
                                                       String decontinent = de_continent.substring((de_continent.length()-2));
                                                       String finaldecontinent = decontinent.replace("ll","");
-                                                      //System.out.println("de continent  " + finaldecontinent);
-                                                      //System.out.println("dx continent  " + finaldxcontinent);
-                                                      double freq = Double.parseDouble(response.substring(16, 25));
-                                                     // S_N = response.substring(40, 43).trim();
-                                                      
-                                                      
-                                                      //S_N = response.substring(46, 49).trim();
-                                                   
-                                                      //time = response.substring(70, response.length()).trim();
-                                                     // String mode = response.substring((response.length()-16),(response.length()-7)).trim();
+                                                      String freqString= response.substring((response.length()-60), (response.length()-51));
+                                                      double freq = Double.parseDouble(freqString.replace(":", ""));
                                                       String info = response.substring(38,(response.length()-7)).trim();
                                                       info = "  " + info;
                                                       S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB"))).trim();
-                                                     //System.out.println(info.indexOf("dB"));
-                                                      //System.out.println(time);
-                                                      
-                                                      //System.out.println(mode);
-                                                      
-                                                     // StringBuffer newtime = new StringBuffer(time);
-                                                     // newtime.insert(2,  ":");
+                                                     
                                                       
                                                       String pattern = "yyyy-MM-dd HH:mm";
                                                       SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC")); 
                                                       String datetime = simpleDateFormat.format(new Date());
-                                                      //String datetime = date ;
-                                                      
+                                                                                                         
                                                       String mode = null;
                                                       if (info.matches("(.*)WPM(.*)")) {
                                                     	   mode ="CW";
@@ -265,6 +240,10 @@ public class ClusterEtl
                                                       if (info.matches("(.*)PSK100(.*)")) {
                                                    	   mode ="PSK100";
                                                      }
+                                                      
+                                                      if (info.matches("(.*)PSK125(.*)")) {
+                                                      	   mode ="PSK125";
+                                                        }
                                                       		//System.out.println(info.matches("(.*)WPM(.*)")) ;
                                                       		
                                                       		
@@ -276,6 +255,10 @@ public class ClusterEtl
                                                       
                                                       if (freq >= 3500 && freq <= 3700 ) {
                                                     	  band = "80M";
+                                                      }
+                                                      
+                                                      if (freq >= 5300 && freq <= 5500 ) {
+                                                    	  band = "60M";
                                                       }
                                                       
                                                       if (freq >= 7000 && freq <= 7200 ) {
@@ -298,6 +281,10 @@ public class ClusterEtl
                                                     	  band = "15M";
                                                       }
                                                       
+                                                      if (freq >= 24890 && freq <= 24990 ) {
+                                                    	  band = "12M";
+                                                      }
+                                                      
                                                       if (freq >= 28000 && freq <= 28500 ) {
                                                     	  band = "10M";
                                                       }
@@ -306,9 +293,13 @@ public class ClusterEtl
                                                     	  band = "6M";
                                                       }
                                                       
+                                                      if (freq >= 144000 && freq <= 146000 ) {
+                                                    	  band = "2M";
+                                                      }
+                                                      
                                                       
                                                 // write line to log file      
-                                                      bufferWritter.write(decall + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent);
+                                                      bufferWritter.write(decall_trimmed + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent);
                                                       bufferWritter.newLine();
                                                       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
@@ -368,7 +359,7 @@ public class ClusterEtl
                                                       java.util.Date newdate = sdf.parse(datetime);
                                                       java.sql.Timestamp sqlDate = new Timestamp(newdate.getTime());
                                                     
-                                                      System.out.println(sqlDate);
+                                                     // System.out.println(sqlDate);
                                                       //date time format change end
                                                   
                                                       String url = "jdbc:postgresql://";
@@ -382,7 +373,7 @@ public class ClusterEtl
                                                           String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, clusteraddress + ":" + iport);
-                                                          pst.setString(2, decall);
+                                                          pst.setString(2, decall_trimmed);
                                                           pst.setString(3, dxcall); 
                                                           pst.setDouble(4, freq);
                                                           pst.setString(5, band);
