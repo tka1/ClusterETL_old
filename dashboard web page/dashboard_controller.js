@@ -67,6 +67,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
             $scope.countries = data;
             var d = new Date();
              $scope.clock = d.toDateString() + " " + d.getHours() + ":" + d.getMinutes() ;
+            var time = d.toDateString() + " " + d.getHours() + ":" + d.getMinutes() ;
            
             
          }); 
@@ -105,7 +106,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
       url4 = url4 + cluster + "'";
         url4 = url4+ "&decont='" + de_continent + "'";
         url4 = url4 + "&mode='" + mode + "'";
-         url4 = url4+ "&dxfrom='" + dxselection + "'";
+         url4 = url4+ "&dxfrom='" + dxselection + "'" ;
        $http.get(url4).
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
@@ -122,7 +123,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
     $scope.start = function() {
         
         
-       $scope.myCall = $interval($scope.ajaxPeriodicall, 7000);    
+       $scope.myCall = $interval($scope.ajaxPeriodicall, 14000);    
            
         
 

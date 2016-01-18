@@ -30,24 +30,25 @@
 
   <div >
              
- <button ng-click="stop()">Stop</button>
+ <!--<button ng-click="stop()">Stop</button>
         
    <!--Cluster: <input type="text" id="cluster" value="localhost:7300">-->
-      
-<select id="clusters">
+    <!--  <p style="padding:30px;">  cluster, spotter continent, mode </p> -->
+      <div style="padding:30px;">
+<select  id="clusters">
     <option value=>Select cluster</option>
- <option value="telnet.reversebeacon.net:7000">reversebeacon</option>
- <option value="192.168.1.34:7301">OH2BBT SKIMMER </option>
-    <option value="cluster.dl9gtb.de:7300">DL9GTB SKIMMER </option>
+ <option value="RBN">reversebeacon</option>
+ <option value="OH2BBT">OH2BBT SKIMMER </option>
+    <option value="dl9gtb">DL9GTB SKIMMER </option>
  </select>
       
       <select id="de_continent">
                 <option value=>Select spotter continent</option>
-                <option value="EU">EU</option>
-                <option value="NA">NA</option>
-                <option value="AS">AS</option>
-                <option value="SA">SA</option>
-                <option value="OC">OC</option>
+                <option value="EU">from EU</option>
+                <option value="NA">from NA</option>
+                <option value="AS">from AS</option>
+                <option value="SA">from SA</option>
+                <option value="OC">from OC</option>
  </select>
       
             <select id="mode">
@@ -59,9 +60,9 @@
                 <option value=PSK100>PSK100</option>
            </select>
       
-                  
+     </div>             
 
-    <p> {{clock}}</p>
+    <p style="padding:30px;"> {{clock}}</p>
       
        <table class="htable">
    <tr>
@@ -100,6 +101,7 @@
       
    </tr>
       </table>
+        <div style="padding:30px;">
         <table class="tftable">
    <tr>
       <th>decall</th>
@@ -123,31 +125,10 @@
       <td>{{ d.insert_time }}</td>
    </tr>
 </table>
+            </div>
+
                                  
-   <!-- <table class="tftable">
-   <tr>
-      <th>Count</th>
-      <th>band</th>
-   </tr>
-   
-   <tr ng-repeat = "d in bandcount.data">
-      <td>{{ d.value  }}</td>
-      <td>{{ d.label }}</td>
-   </tr>
-</table>
-           
-	               
-    <table class="tftable">
-   <tr>
-      <th>Count</th>
-      <th>Country</th>
-   </tr>
-   
-   <tr ng-repeat = "d in greeting.data">
-      <td>{{ d.value  }}</td>
-      <td>{{ d.label }}</td>
-   </tr>
-</table>-->
+
         
          
         

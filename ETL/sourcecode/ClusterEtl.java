@@ -53,11 +53,13 @@ public class ClusterEtl
         //String port = JOptionPane.showInputDialog(null, "Enter cluster port " );
         //int iport = Integer.parseInt(port);
     	String clusteraddress = null;
-    	String call = null;
+    	String call = "";
     	String Sqluser = null;
     	String Sqlpass = null;
     	String Postgresql_address = null;
     	String DataBase = null;
+    	String skimmerName = null;
+    	int rowCounter = 0;	
     	int iport = 0;
     	File configFile = new File("config.properties");
 
@@ -74,10 +76,11 @@ public class ClusterEtl
     		DataBase = props.getProperty("postgresql_db");
     		Sqluser = props.getProperty("postgresql_user");
     		Sqlpass = props.getProperty("postgresql_password");
+    		skimmerName= props.getProperty("skimmer_name");
     		
 
-    		System.out.print("Host name is: " + clusteraddress);
-    		System.out.print("  port is: " + port);
+    		//System.out.print("Host name is: " + clusteraddress);
+    		//System.out.print("  port is: " + port);
     		reader.close();
     	} catch (FileNotFoundException ex) {
     		// file does not exist
@@ -148,6 +151,7 @@ public class ClusterEtl
 
 
     //telnet connection  
+        boolean Ce = false;
         Socket s = new Socket();
         try 
         {
@@ -160,7 +164,7 @@ public class ClusterEtl
             s_in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         }
         
-      
+        
         
         //Host not found
         catch (UnknownHostException e) 
@@ -168,6 +172,31 @@ public class ClusterEtl
             System.err.println("Don't know about host : " + host);
             System.exit(1);
         }
+       
+        catch (ConnectException ce)
+             {
+        
+        	  Ce = true;
+        	  clusterTextArea.append("ConnectException" + "\n");
+            //System.err.println("excp " + ce);
+            try {
+        		  Thread.sleep(10000L);	  // 10 second
+        		}
+        		catch (Exception e) {}
+          
+          
+            
+         
+           
+        }
+        // keep going if connection is ok
+        if (!Ce) {
+        	
+        
+       
+        	
+        
+       
     	try
 		{	
 			s.setSoTimeout (60000);
@@ -178,7 +207,7 @@ public class ClusterEtl
 		}
      
         //Send message to server
-       
+    	
                            String message = call;
                            s_out.println( message );
                                                                                   
@@ -191,14 +220,19 @@ public class ClusterEtl
                            {
                            while ((response = s_in.readLine()) != null) 
                            {				{
-                           
+                        	   						
                                                     // System.out.println( response );
                                                      // write line
                                                       clusterTextArea.append(response + "\n");
-                                                      //focus to last line
+                                                      rowCounter++;
+                                                                                                            //focus to last line
                                                       String ss = clusterTextArea.getText();
                                                       int pos = ss.length();
                                                       clusterTextArea.setCaretPosition(pos);
+                                                      if (rowCounter == 30) {
+                                                    	  clusterTextArea.setText(null);
+                                                    	 rowCounter = 0;	
+                                                      }
 
                                                                                                                                                         
                                                       if (response.startsWith("DX")) {
@@ -372,7 +406,7 @@ public class ClusterEtl
                                                          
                                                           String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
-                                                          pst.setString(1, clusteraddress + ":" + iport);
+                                                          pst.setString(1, skimmerName);
                                                           pst.setString(2, decall_trimmed);
                                                           pst.setString(3, dxcall); 
                                                           pst.setDouble(4, freq);
@@ -428,9 +462,7 @@ public class ClusterEtl
                                //close the socket
                               s.close();
                           	   bufferWritter.close();
-                        	   frame.setVisible(false);
-                        	    frame.dispose();
-                        	    
+                        	  
 
                            }
                            catch (SocketException iioe)
@@ -452,11 +484,12 @@ public class ClusterEtl
                           		  Thread.sleep(30000L);	  // 30 second
                           		}
                           		catch (Exception e) {}
-                        	   frame.setVisible(false);
-                        	    frame.dispose();
+                        	
                         	    
 
                            }
+                           
+                          
                            
                            
                           
@@ -474,8 +507,11 @@ public class ClusterEtl
         
     
                            }
+        frame.setVisible(false);
+	    frame.dispose();
+    	 }
                            }
     
-   // }
+
  
     }
