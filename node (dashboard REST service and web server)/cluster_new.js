@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://cluster:Saturnus1!@localhost:5432/postgres";
+var conString = "postgres://cluster:Saturnus1!@127.0.0.1:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {

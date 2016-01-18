@@ -2,8 +2,6 @@ var app = angular.module("myApp",["ng-fusioncharts"])
 //var clusternameInput = element(by.binding('cluster.address'));
 
 app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
-    
-    var resturl = "http://91.156.129.239:8081/" ;
 
       $scope.attrs = {
         startingangle: "120",
@@ -18,13 +16,13 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         theme: "zune"
           
     };
-          $scope.band = {
+          $scope.myDataSource = {
            data:[{
         label: "null",
         value: "0"
         }]
   };
-          $scope.countries = {
+          $scope.greeting = {
              data:[{
         label: "null",
         value: "0"
@@ -45,12 +43,13 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         var de_continent = document.getElementById("de_continent").value;
         var mode = document.getElementById("mode").value;
           var dx = document.getElementById("dx").value;
-          var dxselection ='';
+           //console.log(dx);
+        var dxselection ='';
        
         if (dx == 'DX'){dxselection=de_continent};
          if (dx == 'ALL'){dxselection=''};
      
-      var  url = resturl + "countrycount?id='";
+      var  url = "http://91.156.129.239:8081/countrycount?id='";
        
 
 
@@ -63,34 +62,39 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
-            //$scope.count = $scope.count + 1;
-            $scope.countries = data;
+            $scope.count = $scope.count + 1;
+            $scope.greeting = data;
             var d = new Date();
              $scope.clock = d.toDateString() + " " + d.getHours() + ":" + d.getMinutes() ;
-           
+           // console.log($scope.greeting);
             
          }); 
         
       
-     var url2 = resturl + "bandcount?id='";
+     var url2 = "http://91.156.129.239:8081/bandcount?id='";
         url2 = url2 + cluster + "'";
             url2 = url2+ "&decont='" + de_continent + "'";
          url2 = url2 + "&mode='" + mode + "'";
-          $http.get(url2).
+        //console.log(url2);
+           $http.get(url2).
          success(function(data, status, headers, config) {
-           
-              $scope.band = data; 
-              $scope.attrs = {
+         $scope.bandcount = data;
+         
+              $scope.myDataSource = data; 
+            //console.log($scope.bandcount.rows);
+                $scope.attrs = {
        
     };  
                         
          });
        
-    var url3 = resturl + "cumul?id='";
+    var url3 = "http://91.156.129.239:8081/cumul?id='";
       url3 = url3 + cluster + "'";
         url3 = url3+ "&decont='" + de_continent + "'";
          url3 = url3 + "&mode='" + mode + "'";
-          $http.get(url3).
+        // console.log(url3);
+        //console.log(cluster.value);
+              $http.get(url3).
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
@@ -106,7 +110,10 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         url4 = url4+ "&decont='" + de_continent + "'";
         url4 = url4 + "&mode='" + mode + "'";
          url4 = url4+ "&dxfrom='" + dxselection + "'";
-       $http.get(url4).
+        
+        // console.log(url4);
+        //console.log(cluster.value);
+              $http.get(url4).
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available

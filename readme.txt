@@ -40,34 +40,3 @@ WEB server, node.js
 * The user interface will be visible in the localhost:3000
 
 
-### Mongodb - related configurations ###
-* Mongo db is running on port 3001. You may access it by this command "mongo localhost:3001"
-* Inside mongo a "meteor" database is created
-* the application initialy creates the "users" collection. The other collections will be created during the usage of the program.
-
-
-### Mongodb - some examples/useful mongo commands ###
-* shell: "meteor mongo" (opens command line connection to mongodb - this command must be done in meteor-application directory)
-* mongo: "use meteor" (switches to "meteor" database inside the mongodb)
-* mongo: "show collections" (shows db collections)
-* mongo: "db.users.update({_id:"u2jhg7NXqkuJkET8p" },{$set: { roles : "admin", }})"
-* mongo: "db.waters.find({},{geo_place_name:1})"
-* mongo: "db.catches.find().pretty()"
-* mongo: "load("../files/init_mongo.js")" <-- this can be used to load initial data to mongodb
-### Configurations and dependencies ###
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact

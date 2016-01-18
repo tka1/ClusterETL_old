@@ -1,1 +1,0 @@
-decall;dxcall;freq;band;S/N;datetime;country;continent;mode;decontinent;dxcontinent

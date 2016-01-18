@@ -3,7 +3,7 @@ var app = angular.module("myApp",["ng-fusioncharts"])
 
 app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
     
-    var resturl = "http://91.156.129.239:8081/" ;
+    var resturl = "http://23.102.21.23:8081/" ;
 
       $scope.attrs = {
         startingangle: "120",
@@ -101,7 +101,7 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
             
          }); 
         
-         var url4 = "http://91.156.129.239:8081/rows?id='";
+         var url4 =  resturl + "rows?id='";
       url4 = url4 + cluster + "'";
         url4 = url4+ "&decont='" + de_continent + "'";
         url4 = url4 + "&mode='" + mode + "'";

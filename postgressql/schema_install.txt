@@ -1,8 +1,14 @@
+CREATE ROLE cluster LOGIN
+  ENCRYPTED PASSWORD 'md52df97743cc3c3e1040bb8540eaab0d92'
+  NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
+
+
 CREATE SCHEMA cluster
   AUTHORIZATION postgres;
 
+GRANT ALL ON SCHEMA cluster TO postgres;
+GRANT USAGE ON SCHEMA cluster TO cluster;
 
-CREATE TABLE cluster.clustertable
 CREATE TABLE cluster.clustertable
 (
   title character varying,
@@ -180,9 +186,6 @@ ALTER FUNCTION cluster.latestrows(text, text, text, text)
 
 
   
-  CREATE ROLE cluster LOGIN
-   PASSWORD 'xxxxxxxx'
-  NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
 
 GRANT  USAGE   ON SCHEMA cluster  TO cluster;
 GRANT SELECT, UPDATE, INSERT, TRUNCATE, DELETE ON TABLE cluster.clustertable TO cluster;
