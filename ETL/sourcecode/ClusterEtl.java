@@ -211,7 +211,7 @@ public class ClusterEtl
                            String message = call;
                            s_out.println( message );
                                                                                   
-                           System.out.println("Message send");
+                           System.out.println("Message sent");
                                                       
                            //Get response from server
                            String response;
@@ -241,6 +241,7 @@ public class ClusterEtl
                                                       String decall_trimmed = decallin.replaceAll("[-#:]","");
                                                       String dxcall = response.substring((response.length()-50), (response.length()-37)).trim();
                                                       String country_2 = country.Search(dxcall);
+                                                      String de_country = country.Search(decall_trimmed);
                                                       String dxcontinent = country_2.substring((country_2.length()-2));
                                                       String finaldxcontinent = dxcontinent.replace("ll","");
                                                       String de_continent = country.Search(decall_trimmed);
@@ -250,6 +251,7 @@ public class ClusterEtl
                                                       double freq = Double.parseDouble(freqString.replace(":", ""));
                                                       String info = response.substring(38,(response.length()-7)).trim();
                                                       info = "  " + info;
+                                                                                                           
                                                       S_N = info.substring((info.indexOf("dB")-3), (info.indexOf("dB"))).trim();
                                                      
                                                       
@@ -257,7 +259,16 @@ public class ClusterEtl
                                                       SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
                                                       simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC")); 
                                                       String datetime = simpleDateFormat.format(new Date());
-                                                                                                         
+                                                        
+                                                      String Skimmode = null;
+                                                      if (info.matches("(.*)CQ(.*)")) {
+                                                    	  Skimmode ="CQ";
+                                                     }
+                                                      
+                                                      if (info.matches("(.*)DE(.*)")) {
+                                                    	  Skimmode ="DE";
+                                                     }
+                                                     
                                                       String mode = null;
                                                       if (info.matches("(.*)WPM(.*)")) {
                                                     	   mode ="CW";
@@ -333,7 +344,7 @@ public class ClusterEtl
                                                       
                                                       
                                                 // write line to log file      
-                                                      bufferWritter.write(decall_trimmed + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent);
+                                                      bufferWritter.write(decall_trimmed + ";" + dxcall + ";" + freq + ";" + band + ";" + S_N + ";" + datetime + ";" + country_2 +";" + mode +";" +decontinent +";" +dxcontinent +";" +de_country +";" + Skimmode);
                                                       bufferWritter.newLine();
                                                       bufferWritter.flush();
                                                       //System.out.println(decall + ";" + dxcall + ";" + freq + ";" + S_N + ";" + date + " " + newtime);
@@ -404,7 +415,7 @@ public class ClusterEtl
                                                      try {
                                                           con = DriverManager.getConnection(url, user, password);
                                                          
-                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                                                          String stm = "INSERT INTO cluster.clustertable(title, decall, dxcall, freq, band, datetime,sig_noise, country, mode, de_continent, dx_continent, de_country, skimmode) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                                                           pst = con.prepareStatement(stm);
                                                           pst.setString(1, skimmerName);
                                                           pst.setString(2, decall_trimmed);
@@ -417,6 +428,9 @@ public class ClusterEtl
                                                           pst.setString(9, mode);
                                                           pst.setString(10, finaldecontinent);
                                                           pst.setString(11, finaldxcontinent);
+                                                          pst.setString(12, de_country);
+                                                          pst.setString(13, Skimmode);
+                                                          
                                                           pst.executeUpdate();
 
 
