@@ -4,7 +4,7 @@ var app = angular.module("myApp",["ng-fusioncharts"])
 
 app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
     
-    var resturl = "http://localhost:8081/" ;
+    var resturl = "http://91.156.129.239:8081/" ;
     
 
       $scope.attrs = {
@@ -15,9 +15,9 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         slicingdistance: "15",
         showpercentvalues: "1",
         showpercentintooltip: "0",
-        "paletteColors": "#e2e7ea",
+        "paletteColors": "#0075c2",
 
-        theme: "fint"
+        theme: "zune"
           
     };
      $scope.avg_attrs = {
@@ -25,8 +25,19 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         theme: "zune"
           
     };
-          $scope.band = {data:[{label: "null",value: "0"}]};
-          $scope.countries ={"caption": "COUNTRIES FROM LAST HOUR","showValues": "1"},{data:[{label: "null",value: "0"}]};
+          $scope.band = {
+           data:[{
+        label: "null",
+        value: "0"
+        }]
+  };
+          $scope.countries = {
+             data:[{
+        label: "null",
+        value: "0"
+    
+    }]
+  };
     
      $scope.cumul = {
            data:[{
@@ -58,13 +69,13 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
          if (dx == 'ALL'){dxselection=''};
         
      
-      var  url = resturl + "countrycount?id=";
+      var  url = resturl + "countrycount?id='";
        
 
 
-        url = url + cluster ;
-        url = url+ "&decont=" + de_continent ;
-        url = url + "&mode=" + mode ;
+        url = url + cluster + "'";
+        url = url+ "&decont='" + de_continent +"'";
+        url = url + "&mode='" + mode + "'";
    
       //console.log(dx_call);
         $http.get(url).
@@ -81,10 +92,10 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
          }); 
         
       
-     var url2 = resturl + "bandcount?id=";
-        url2 = url2 + cluster ;
-            url2 = url2+ "&decont=" + de_continent ;
-         url2 = url2 + "&mode=" + mode ;
+     var url2 = resturl + "bandcount?id='";
+        url2 = url2 + cluster + "'";
+            url2 = url2+ "&decont='" + de_continent + "'";
+         url2 = url2 + "&mode='" + mode + "'";
           $http.get(url2).
          success(function(data, status, headers, config) {
            
@@ -95,10 +106,10 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
                         
          });
        
-    var url3 = resturl + "cumul?id=";
-      url3 = url3 + cluster ;
-        url3 = url3+ "&decont=" + de_continent ;
-         url3 = url3 + "&mode=" + mode ;
+    var url3 = resturl + "cumul?id='";
+      url3 = url3 + cluster + "'";
+        url3 = url3+ "&decont='" + de_continent + "'";
+         url3 = url3 + "&mode='" + mode + "'";
           $http.get(url3).
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously
@@ -110,11 +121,11 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
             
          }); 
         
-         var url4 = resturl + "rows?id=";
-      url4 = url4 + cluster ;
-        url4 = url4+ "&decont=" + de_continent ;
-        url4 = url4 + "&mode=" + mode ;
-         url4 = url4+ "&dxfrom=" + dxselection ;
+         var url4 = resturl + "rows?id='";
+      url4 = url4 + cluster + "'";
+        url4 = url4+ "&decont='" + de_continent + "'";
+        url4 = url4 + "&mode='" + mode + "'";
+         url4 = url4+ "&dxfrom='" + dxselection + "'" ;
       //  console.log(url4);
        $http.get(url4).
          success(function(data, status, headers, config) {
@@ -135,12 +146,12 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
             var dxcall = dx.toUpperCase(); 
           dxcall = dxcall + "%";
                    
-        var url5 = resturl + "dxrows?id=";
-        url5 = url5 + cluster ;
-        url5 = url5+ "&dxcall=" + dxcall ;
+        var url5 = resturl + "dxrows?id='";
+        url5 = url5 + cluster + "'";
+        url5 = url5+ "&dxcall='" + dxcall + "'";
           url5 = encodeURI(url5);
-          url5 = url5+ "&decont=" + de_continent ;
-          url5 = url5+ "&mode=" + mode ;
+          url5 = url5+ "&decont='" + de_continent + "'";
+          url5 = url5+ "&mode='" + mode + "'";
            // console.log(url5);
         $http.get(url5).
         success(function(data, status, headers, config) {

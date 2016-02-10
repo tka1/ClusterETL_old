@@ -9,11 +9,16 @@
       <script type="text/javascript" src="js/fusioncharts.js"></script>
 <script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
       <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
-    <script src="dashboard_controller.js"></script> 
- 
+    <script src="dashboard_controller_sn.js"></script> 
+     
+
+
     </head>
     
 <body ng-app="myApp" ng-controller="timecontrl"  >
+
+  
+	
        
 		<div ng-click="start()"  class="content">
             <div class="header">
@@ -24,9 +29,12 @@
 	
 
   <div >
-         
-
-   <div style="padding:30px;">
+             
+ <!--<button ng-click="stop()">Stop</button>
+        
+   <!--Cluster: <input type="text" id="cluster" value="localhost:7300">-->
+    <!--  <p style="padding:30px;">  cluster, spotter continent, mode </p> -->
+      <div style="padding:30px;">
 <select  id="clusters">
     <option value=>Select cluster</option>
  <option value="RBN">reversebeacon</option>
@@ -56,23 +64,29 @@
 
     <p style="padding:30px;"> {{clock}}</p>
       
-     <!--  <table class="htable">
+       <table class="htable">
    <tr>
       <th>DISTINCT CALLSIGNS FROM LAST 7 HOUR </th>
       <th>DISTINCT CALLSIGNS/BAND (LAST HOUR) </th>
    </tr>
-      </table> -->
+      </table>
      
-       <div class="label" fusioncharts width="500" height="360" type="column3d" chart="{{attrs}}", datasource="{{cumul}}" ></div>
+               <div class="label" fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{cumul}}" ></div>
        
-      <div fusioncharts width="500" height="360" type="column3d" chart="{{attrs}}", datasource="{{band}}" ></div>
+        <div fusioncharts width="400" height="300" type="column3d" chart="{{attrs}}", datasource="{{band}}" ></div>
      
- 
-      <div fusioncharts width="900" height="400" type="pie3d" chart="{{attrs}}", datasource="{{countries}}" ></div>
+            <table class="htable">
+   <tr>
+      <th> COUNTRIES FROM LAST HOUR </th>
+      
+   </tr>
+      </table>
+      
+           <div fusioncharts width="900" height="400" type="pie3d" chart="{{attrs}}", datasource="{{countries}}" ></div>
      
    
     </div>
-  
+       
 
     <div >
    
@@ -83,7 +97,7 @@
          <input id="filter on" type="radio" name="filter"value="filter on"> filter on 
          <input id="filter off"type="radio" name="filter" value="filter off" checked> filter off 
   </form>
-         
+         <div class="label" fusioncharts width="600" height="300" type="line" chart="{{avg_attrs}}", datasource="{{averagesnr}}" ></div>
  
         <div style="padding:30px;">
         <table class="tftable">
