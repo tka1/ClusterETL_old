@@ -142,7 +142,7 @@ public class ClusterEtl
                            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
    // write header if file not exits
         if(newfile) {
-        	 bufferWritter.write("decall;dxcall;freq;band;S/N;datetime;country;continent;mode;decontinent;dxcontinent");
+        	 bufferWritter.write("decall;dxcall;freq;band;S/N;datetime;country;continent;mode;decontinent;dxcontinent;de_country;skimmode");
              bufferWritter.newLine();
              bufferWritter.flush();
         }
