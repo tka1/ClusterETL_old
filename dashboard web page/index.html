@@ -9,6 +9,7 @@
       <script type="text/javascript" src="js/fusioncharts.js"></script>
 <script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
       <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
+      <script src="js/angular-cookies.min.js"></script>
     <script src="dashboard_controller.js"></script> 
  
     </head>
@@ -17,51 +18,37 @@
        
 		<div ng-click="start()"  class="content">
             <div class="header">
-             <h1 class="topH1"> DX cluster Dashboard by OH2BBT</h1>
+             <h1 ng-mouseover="start()" class="topH1"> DX cluster Dashboard by OH2BBT</h1>
                 </div>
 			
 		<div class="stuff">
 	
 
   <div >
-         
+       
 
    <div style="padding:30px;">
-<select  id="clusters">
-    <option value=>Select cluster</option>
- <option value="RBN">reversebeacon</option>
- <option value="OH2BBT">OH2BBT SKIMMER </option>
-    <option value="dongle">OH2BBT dongle</option>
- </select>
-      
-      <select id="de_continent">
-                <option value=>Select spotter continent</option>
-                <option value="EU">from EU</option>
-                <option value="NA">from NA</option>
-                <option value="AS">from AS</option>
-                <option value="SA">from SA</option>
-                <option value="OC">from OC</option>
- </select>
-      
-            <select id="mode">
-                <option value=>Select mode</option>
-                    <option value=CW>CW</option>
-                    <option value=RTTY>RTTY</option>
-                    <option value=PSK31>PSK31</option>
-                <option value=PSK63>PSK63</option>
-                <option value=PSK100>PSK100</option>
+
+       Select cluster:
+            <select data-ng-model="clust.clust"
+                data-ng-options="act for act in cluts">   
            </select>
+       
+        Select cluster continent:
+            <select data-ng-model="cont.cont"
+                data-ng-options="act for act in conts">   
+           </select>
+       Select mode:
+            <select data-ng-model="txMode.mode"
+                data-ng-options="act for act in modes">   
+           </select>
+     
       
      </div>             
 
     <p style="padding:30px;"> {{clock}}</p>
       
-     <!--  <table class="htable">
-   <tr>
-      <th>DISTINCT CALLSIGNS FROM LAST 7 HOUR </th>
-      <th>DISTINCT CALLSIGNS/BAND (LAST HOUR) </th>
-   </tr>
-      </table> -->
+
      
        <div class="label" fusioncharts width="500" height="360" type="column3d" chart="{{attrs}}", datasource="{{cumul}}" ></div>
        

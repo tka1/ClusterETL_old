@@ -1,10 +1,30 @@
-var app = angular.module("myApp",["ng-fusioncharts"])
+var app = angular.module("myApp",["ng-fusioncharts","ngCookies"])
 //var dx_call ='';
 //var clusternameInput = element(by.binding('cluster.address'));
 
-app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
+app.controller('timecontrl', function ($scope,$cookies, $cookieStore,  $window,$http, $timeout, $interval) {
     
-    var resturl = "http://localhost:8081/" ;
+    var resturl = "http://91.156.129.239:8081/" ;
+   var now = new Date();
+    var  exp = new Date(now.getFullYear()+1, now.getMonth(), now.getDate());
+    
+  if($cookies.get('mode') != null){
+                    $scope.txMode = {mode: $cookies.get('mode') };}
+            else {  $scope.txMode = {mode: 'RTTY' };}
+    
+         $scope.modes =["CW","RTTY","PSK31","PSK63"];
+    
+      if($cookies.get('cont') != null){
+                    $scope.cont = {cont: $cookies.get('cont') };}
+            else {  $scope.cont = {cont: 'RTTY' };}
+    
+         $scope.conts =["EU","NA","SA","AS","OC"];
+    
+    if($cookies.get('clust') != null){
+                    $scope.clust = {clust: $cookies.get('clust') };}
+            else {  $scope.clusts = {clust: 'RBN' };}
+    
+         $scope.cluts =["RBN","OH2BBT","dongle"];
     
 
       $scope.attrs = {
@@ -45,12 +65,30 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
                    
     $scope.count = 0;
     $scope.ajaxPeriodicall = function() {
-          var cluster = document.getElementById("clusters").value;
-        var de_continent = document.getElementById("de_continent").value;
-        var mode = document.getElementById("mode").value;
-         var dx = document.getElementById("dx").value;
+        modejson = JSON.stringify($scope.txMode );
+        modeparse = JSON.parse(modejson);
+          var mode = modeparse.mode;
+        
+         contjson = JSON.stringify($scope.cont );
+        contparse = JSON.parse(contjson);
+          var de_continent = contparse.cont;
+        
+        clustjson = JSON.stringify($scope.clust );
+        clustparse = JSON.parse(clustjson);
+          var cluster = clustparse.clust;
+        
+          var dx = document.getElementById("dx").value;
         var filter= document.getElementById("filter on").checked;
-              
+   
+      
+        
+        $cookies.put('clust',cluster,{  expires: exp });
+        $cookies.put('cont',contparse.cont,{  expires: exp });
+     $cookies.put('mode',modeparse.mode,{  expires: exp });
+        $scope.cookietechnology = $cookies.get('clust');
+        
+       console.log(contparse.cont);
+        
         //var dxcall = $scope.dxcall;
           var dxselection ='';
        
@@ -65,8 +103,9 @@ app.controller('timecontrl', function ($scope, $http, $timeout, $interval) {
         url = url + cluster ;
         url = url+ "&decont=" + de_continent ;
         url = url + "&mode=" + mode ;
-   
-      //console.log(dx_call);
+        
+  
+        
         $http.get(url).
          success(function(data, status, headers, config) {
             // this callback will be called asynchronously

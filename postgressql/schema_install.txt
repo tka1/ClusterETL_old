@@ -119,8 +119,7 @@ CREATE OR REPLACE VIEW cluster.latestrows AS
     clustertable.dx_continent
    FROM cluster.clustertable
   WHERE clustertable.insert_time >= (now() - '01:00:00'::interval)
-  ORDER BY clustertable.insert_time DESC
- LIMIT 30;
+  ORDER BY clustertable.insert_time DESC ;
 
 ALTER TABLE cluster.latestrows
   OWNER TO postgres;
