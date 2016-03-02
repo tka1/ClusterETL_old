@@ -1,0 +1,8 @@
+e:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.exe.config
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.exe
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.pdb
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\bin\Debug\Npgsql.dll
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\bin\Debug\Npgsql.xml
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.exe
+E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.pdb

@@ -1,0 +1,59 @@
+
+Log Entry : 17.24.13 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 17.25.28 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 17.49.30 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 17.51.41 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 17.52.09 maanantaina 29. helmikuuta 2016
+  :
+  System.ArgumentOutOfRangeException: StartIndex cannot be less than zero.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at ClusterEtl.Etl.StartClient() in E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\Program.cs:line 98
+-------------------------------
+
+Log Entry : 17.52.33 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 17.54.12 maanantaina 29. helmikuuta 2016
+  :
+  System.ArgumentOutOfRangeException: StartIndex cannot be less than zero.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at ClusterEtl.Etl.StartClient() in E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\Program.cs:line 98
+-------------------------------
+
+Log Entry : 17.54.33 maanantaina 29. helmikuuta 2016
+  :
+  System.ArgumentOutOfRangeException: StartIndex cannot be less than zero.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at ClusterEtl.Etl.StartClient() in E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\Program.cs:line 98
+-------------------------------
+
+Log Entry : 18.01.19 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 18.03.11 maanantaina 29. helmikuuta 2016
+  :
+  ETL started
+-------------------------------
