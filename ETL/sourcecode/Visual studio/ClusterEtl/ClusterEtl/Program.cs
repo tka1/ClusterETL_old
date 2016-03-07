@@ -36,10 +36,11 @@ namespace ClusterEtl
 
             while (true)
             {
+                bool ConnStatus = false;
                 string clusteradd = System.Configuration.ConfigurationManager.AppSettings["clusteradd"];
                 string clusterport = System.Configuration.ConfigurationManager.AppSettings["clusterport"];
                 int port = Int32.Parse(clusterport);
-                Console.WriteLine(port);
+                Console.WriteLine("Trying connect");
                 string dbserver = System.Configuration.ConfigurationManager.AppSettings["dbserver"];
                 string database = System.Configuration.ConfigurationManager.AppSettings["database"];
                 string userid = System.Configuration.ConfigurationManager.AppSettings["userid"];
@@ -65,6 +66,12 @@ namespace ClusterEtl
                         sender.Connect(remoteEP);
                         Console.WriteLine("Socket connected to {0}",
                           sender.RemoteEndPoint.ToString());
+                         ConnStatus = true;
+                        using (StreamWriter w = File.AppendText("log.txt"))
+                        {
+                            Log("Connected", w);
+
+                        }
                         //send callsign
                         string call1 = "oh2bbt" + Environment.NewLine;
                         byte[] msg = Encoding.ASCII.GetBytes(call1);
@@ -75,6 +82,7 @@ namespace ClusterEtl
                         // while (looppi <1000000)
                         while (true)
                         {
+                            sender.ReceiveTimeout = 90000;
                             int bytesRec = sender.Receive(bytes);
                             string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                             response = response.Trim();
@@ -297,9 +305,9 @@ namespace ClusterEtl
                         }
 
                         // Release the socket.
-                        sender.Shutdown(SocketShutdown.Both);
-                        sender.Close();
-                        Console.WriteLine("ended");
+                       // sender.Shutdown(SocketShutdown.Both);
+                        //sender.Close();
+                       // Console.WriteLine("ended");
                         // Console.ReadLine();
                     }
                     catch (ArgumentNullException ane)
@@ -308,13 +316,22 @@ namespace ClusterEtl
                     }
                     catch (SocketException se)
                     {
-                        Console.WriteLine("SocketException : {0}", se.ToString());
+                        
                         // Console.ReadLine();
-                        using (StreamWriter w = File.AppendText("log.txt"))
+                        //Console.WriteLine(ConnStatus);
+                        if (ConnStatus)
                         {
-                          
-                            Log(se.ToString(), w);
+                            Console.WriteLine("SocketException : {0}", se.ToString());
+                            using (StreamWriter w = File.AppendText("log.txt"))
+                            {
 
+                                Log(se.ToString(), w);
+
+                            }
+                            // Release the socket.
+                             sender.Shutdown(SocketShutdown.Both);
+                            sender.Close();
+                           ConnStatus = false;
                         }
 
                     }
@@ -333,6 +350,7 @@ namespace ClusterEtl
                 {
                     Console.WriteLine(e.ToString());
                 }
+             
             }
         }
 

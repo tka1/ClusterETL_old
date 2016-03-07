@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var pg = require('pg');
 
-var conString = "postgres://cluster:Saturnus1!@192.168.1.48:5432/postgres";
+var conString = "postgres://cluster:Saturnus1!@localhost:5432/postgres";
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -107,7 +107,7 @@ res.setHeader('Cache-Control', 'public, max-age=30');
     var mode = req.query.mode; 
    var dx_from = req.query.dxfrom; 
  
-    client.query("SELECT * from cluster.latestrows where title =$1  and de_continent =$2 and mode = $3 and dx_continent != $4 order by insert_time desc limit 30",[id,de_cont,mode,dx_from],function(err, result) {
+    client.query("SELECT * from cluster.latestrows where title =$1  and de_continent =$2 and mode = $3 and dx_continent != $4 order by insert_time desc limit 30 ",[id,de_cont,mode,dx_from],function(err, result) {
     if(err) {
       return console.error('error running query', err);
     }
@@ -120,6 +120,7 @@ res.setHeader('Cache-Control', 'public, max-age=30');
       }
              retdata = 
       res.json(querydata);
+//console.log(querydata);
   });
 }); 
     

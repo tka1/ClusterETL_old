@@ -6,3 +6,15 @@ E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\bin\Debug\Npgsql.xml
 E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.csprojResolveAssemblyReference.cache
 E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.exe
 E:\Visual Studio 2015\Projects\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.pdb
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.exe.config
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.pdb
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.exe
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.exe.manifest
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.application
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.exe
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\ClusterEtl.pdb
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\Npgsql.dll
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\bin\Debug\Npgsql.xml
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.exe.manifest
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.application
+E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\obj\Debug\ClusterEtl.csprojResolveAssemblyReference.cache

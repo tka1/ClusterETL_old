@@ -57,3 +57,2303 @@ Log Entry : 18.03.11 maanantaina 29. helmikuuta 2016
   :
   ETL started
 -------------------------------
+
+Log Entry : 20.40.27 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.50.59 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.51.57 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.53.22 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.54.24 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.54.53 torstaina 3. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 80
+-------------------------------
+
+Log Entry : 20.56.16 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.56.44 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.56.59 torstaina 3. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 80
+-------------------------------
+
+Log Entry : 20.58.31 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.58.57 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 20.59.44 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 21.00.04 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 21.00.19 torstaina 3. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 80
+-------------------------------
+
+Log Entry : 21.02.16 torstaina 3. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 21.02.16 torstaina 3. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 21.02.36 torstaina 3. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 85
+-------------------------------
+
+Log Entry : 21.02.45 torstaina 3. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.47 perjantaina 4. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 8.34.47 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.48 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.48 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.49 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.49 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.50 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.50 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.51 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.51 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.52 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.52 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.53 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.53 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.54 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.54 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.55 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.55 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.56 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.56 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.57 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.57 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.58 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.58 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.34.59 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.34.59 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.00 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.00 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.01 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.01 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.02 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.02 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.03 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.03 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.04 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.04 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.05 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.05 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.06 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.06 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.07 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.07 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.08 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.08 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.09 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.09 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.10 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.10 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.11 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.11 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.12 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.12 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.13 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.13 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.14 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.14 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.15 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.15 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.16 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.16 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.17 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.17 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.18 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.18 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.19 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.19 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.20 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.20 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.21 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.21 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.22 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.22 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.23 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.23 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.24 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.24 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.25 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.25 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.26 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.26 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.27 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.27 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.28 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.28 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.30 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.30 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.31 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.31 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.32 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.32 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.33 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.33 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.34 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.34 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.35 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.35 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.36 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.36 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.37 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.37 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.38 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.38 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.39 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.39 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.40 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.40 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.41 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.41 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.42 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.42 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.43 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.43 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.44 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.44 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.45 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.45 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.46 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.46 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.48 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.48 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.49 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.49 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.50 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.50 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.51 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.51 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.52 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.52 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.53 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.53 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.54 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.54 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.55 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.55 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.57 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.57 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.58 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.58 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.35.59 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.35.59 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.00 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.00 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.01 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.01 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.02 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.02 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.03 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.03 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.04 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.04 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.06 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.06 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.07 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.07 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.08 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.08 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.09 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.09 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.10 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.10 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.11 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.11 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.13 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.13 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.15 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.15 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.16 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.16 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.17 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.17 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.18 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.18 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.24 perjantaina 4. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 8.36.24 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.38 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.38 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.36.48 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.36.48 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.37.07 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.37.07 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.37.23 perjantaina 4. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 8.37.23 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.40.08 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.40.08 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.41.47 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.41.47 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.44.32 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.44.32 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.49.01 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.49.01 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.49.42 perjantaina 4. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 8.49.42 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.53.13 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 8.53.13 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.56.46 perjantaina 4. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 8.56.46 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 8.58.19 perjantaina 4. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 8.58.19 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 9.13.22 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 9.13.22 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.02.04 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.02.04 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.09.57 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.09.57 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.24.34 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.24.34 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.21.48 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.21.48 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.23.12 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.23.12 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.29.07 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.29.07 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.38.22 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.38.22 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 15.08.29 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 15.08.29 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 18.38.11 perjantaina 4. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 18.38.11 perjantaina 4. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 9.41.47 lauantaina 5. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 9.42.19 lauantaina 5. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 9.42.19 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.15.24 lauantaina 5. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 10.15.24 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.16.54 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.16.54 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.19.30 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.19.30 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.27.13 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.27.13 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.28.43 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.28.43 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.31.07 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.31.07 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.32.55 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.32.55 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.36.09 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.36.09 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.42.57 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.42.57 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.44.27 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.44.27 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 10.53.58 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 10.53.58 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.00.16 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.00.16 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.34.27 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.34.27 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.37.27 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.37.28 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.41.01 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.41.02 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.43.36 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.43.36 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.51.07 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.51.07 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.57.07 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.57.07 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.59.24 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 11.59.25 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.01.24 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.01.24 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.05.46 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.05.46 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.07.28 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.07.28 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.10.35 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.10.35 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.14.07 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.14.07 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.16.02 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.16.02 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.20.44 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.20.45 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.23.46 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.23.46 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.27.47 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.27.47 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.29.43 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.29.43 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.32.28 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.32.28 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.34.15 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.34.15 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.35.45 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.35.45 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.37.15 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.37.15 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.40.59 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.40.59 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.43.11 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.43.11 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.45.52 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.45.52 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.47.22 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.47.22 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.48.52 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.48.52 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.50.22 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.50.22 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 12.58.30 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 12.58.30 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.04.21 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.04.21 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.10.23 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.10.23 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.11.53 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.11.53 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.24.13 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.24.14 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.28.21 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.28.21 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.29.51 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.29.51 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.39.26 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.39.26 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.41.42 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.41.42 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.43.56 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.43.56 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.46.35 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.46.35 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.50.56 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.50.56 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.53.59 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.53.59 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 13.58.11 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 13.58.11 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.01.54 lauantaina 5. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 14.01.54 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.04.05 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.04.05 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.06.55 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.06.55 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.08.25 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.08.25 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.09.55 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.09.56 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.11.26 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.11.26 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 14.13.02 lauantaina 5. maaliskuuta 2016
+  :
+  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at ClusterEtl.Etl.StartClient() in E:\GitHub\ClusterETL\ETL\sourcecode\Visual studio\ClusterEtl\ClusterEtl\Program.cs:line 86
+-------------------------------
+
+Log Entry : 14.13.02 lauantaina 5. maaliskuuta 2016
+  :
+  Connected
+-------------------------------
+
+Log Entry : 11.55.33 maanantaina 7. maaliskuuta 2016
+  :
+  ETL started
+-------------------------------
+
+Log Entry : 11.55.33 maanantaina 7. maaliskuuta 2016
+  :
+  Connected
+-------------------------------

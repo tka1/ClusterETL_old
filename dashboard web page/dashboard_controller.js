@@ -188,20 +188,7 @@ app.controller('timecontrl', function ($scope,$cookies, $cookieStore,  $window,$
         $scope.dxrows = data;
                 }); 
           
-               var url6 = resturl + "averagesnr?id='";
-        url6 = url6 + cluster + "'";
-        url6 = url6+ "&dxcall='" + dxcall + "'";
-          url6 = encodeURI(url6);
-          url6 = url6+ "&decont='" + de_continent + "'";
-          url6 = url6+ "&mode='" + mode + "'";
-           // console.log(url5);
-        $http.get(url6).
-        success(function(data, status, headers, config) {
-        // this callback will be called asynchronously
-        // when the response is available
-        $scope.averagesnr = data;
-              //console.log(data);
-             }); 
+    
           
       }
          if (!filter) {

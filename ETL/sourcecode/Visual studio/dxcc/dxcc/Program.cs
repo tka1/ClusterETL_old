@@ -14,7 +14,7 @@ namespace dxcc
         {
             NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1;User Id=cluster;" +
                                 "Password=Saturnus1!;Database=postgres;");
-            try
+            try // truncate dxcc table
             {
                 conn.Open();
                 // Define a query
@@ -28,11 +28,12 @@ namespace dxcc
             {
                 System.Console.WriteLine("READING:");
                 System.Console.WriteLine("  ERROR:" + ex.Message);
+                Console.ReadLine();
            }
 
             char splitchar = ':';
             char splitchar2 = ',';
-            try {
+            try { // parse country file
                 int kountti = 0;
                 string[] lines = File.ReadAllLines("wl_cty.txt");    // read rows to array 
 
@@ -41,7 +42,6 @@ namespace dxcc
                     if (":".Equals(lines[i].Substring(lines[i].Length - 1, 1))) // country line
                     {
                         string[] countryline = lines[i].Split(splitchar); // split to columns
-                        //Console.WriteLine(countryline[0]);
                         int prefrow = 1;
                         kountti++;
                         while (!":".Equals(lines[i+prefrow].Substring(lines[i+prefrow].Length - 1, 1))) // loop all prefix lines
@@ -72,24 +72,7 @@ namespace dxcc
                                 Console.WriteLine(pref + "  " + countryline[0] + "  "+ kountti);
                                 try
                                 {
-                                    // conn.Open();
-
-                                    // Define a query
-                                    //  string sql = "insert into cluster.dxcc(country,prefix,cq_zone,itu_zone,continent,lat,long,local_time,prim_dxcc_prefix) values ('";
-                                    //    sql = sql + countryline[0].Trim().Replace("'", "") + "','";
-                                    //sql = sql + pref + "','";
-                                    //sql = sql + countryline[1].Trim().Replace("'","") + "','";
-                                    //sql = sql + countryline[2].Trim().Replace("'", "") + "','";
-                                    //sql = sql + countryline[3].Trim().Replace("'", "") + "','";
-                                    //sql = sql + countryline[4].Trim().Replace("'", "") + "','";
-                                    //sql = sql + countryline[5].Trim().Replace("'", "") + "','";
-                                    // sql = sql + countryline[6].Trim().Replace("'", "") + "','"; 
-                                    // sql = sql + countryline[7].Trim().Replace("'", "") + "')";
-                                    //Console.WriteLine(sql);
-                                    //NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
-                                    // Execute a query
-                                    //NpgsqlDataReader dr = cmd.ExecuteReader();
-                                    // Close connection
+                                    
 
                                     conn.Open();
                                     // Define a query
@@ -117,13 +100,14 @@ namespace dxcc
                                     NpgsqlDataReader dr = cmd.ExecuteReader();
                                     conn.Close();
 
-                                    conn.Close();
+                                    
                                 }
                                 catch (Exception ex)
                                 {
                                     System.Console.WriteLine("READING:");
                                     System.Console.WriteLine("  ERROR:" + ex.Message);
-                                   
+                                    Console.ReadLine();
+
                                 }
 
 

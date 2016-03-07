@@ -82,6 +82,22 @@ ALTER TABLE cluster.country_count
 GRANT ALL ON TABLE cluster.country_count TO postgres;
 GRANT SELECT ON TABLE cluster.country_count TO cluster;
 
+CREATE OR REPLACE VIEW cluster.cumul_spot_count AS 
+ SELECT count(DISTINCT clustertable.dxcall) AS spot_count,
+    to_char(clustertable.insert_time, 'dd/HH24'::text) AS day_hour,
+    clustertable.title,
+    clustertable.de_continent,
+    clustertable.mode
+   FROM cluster.clustertable
+  WHERE clustertable.insert_time >= (now() - '06:00:00'::interval)
+  GROUP BY (to_char(clustertable.insert_time, 'dd/HH24'::text)), clustertable.title, clustertable.de_continent, clustertable.mode
+  ORDER BY (to_char(clustertable.insert_time, 'dd/HH24'::text));
+
+ALTER TABLE cluster.cumul_spot_count
+  OWNER TO postgres;
+GRANT ALL ON TABLE cluster.cumul_spot_count TO postgres;
+GRANT SELECT ON TABLE cluster.cumul_spot_count TO public;
+
 CREATE OR REPLACE VIEW cluster.dxrows AS 
  SELECT clustertable.decall,
     clustertable.dxcall,
@@ -97,7 +113,7 @@ CREATE OR REPLACE VIEW cluster.dxrows AS
    FROM cluster.clustertable
   WHERE clustertable.insert_time >= (now() - '01:00:00'::interval)
   ORDER BY clustertable.insert_time DESC
- LIMIT 30;
+ ;
 
 ALTER TABLE cluster.dxrows
   OWNER TO postgres;
@@ -233,6 +249,49 @@ SELECT decall,dxcall,country,freq,band,mode,sig_noise,insert_time
   ROWS 1000;
 ALTER FUNCTION cluster.latestrows(text, text, text, text)
   OWNER TO postgres;
+
+CREATE SEQUENCE cluster.dxcc_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 4028
+  CACHE 1;
+ALTER TABLE cluster.dxcc_id_seq
+  OWNER TO postgres;
+GRANT ALL ON SEQUENCE cluster.dxcc_id_seq TO postgres;
+GRANT ALL ON SEQUENCE cluster.dxcc_id_seq TO cluster;
+
+CREATE TABLE cluster.dxcc
+(
+  country character varying,
+  prefix character varying,
+  id serial NOT NULL,
+  cq_zone character varying,
+  itu_zone character varying,
+  continent character varying,
+  lat character varying,
+  "long" character varying,
+  local_time character varying,
+  prim_dxcc_prefix character varying,
+  CONSTRAINT dxcctable_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE cluster.dxcc
+  OWNER TO postgres;
+GRANT ALL ON TABLE cluster.dxcc TO postgres;
+GRANT SELECT, UPDATE, INSERT, TRUNCATE, DELETE ON TABLE cluster.dxcc TO cluster;
+
+-- Index: cluster.prefix_ind
+
+-- DROP INDEX cluster.prefix_ind;
+
+CREATE INDEX prefix_ind
+  ON cluster.dxcc
+  USING btree
+  (prefix COLLATE pg_catalog."default");
+
 
 
   
