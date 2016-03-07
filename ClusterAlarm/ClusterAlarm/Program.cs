@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +18,12 @@ namespace ClusterAlarm
             string database = System.Configuration.ConfigurationManager.AppSettings["database"];
             string userid = System.Configuration.ConfigurationManager.AppSettings["userid"];
             string password = System.Configuration.ConfigurationManager.AppSettings["password"];
-            NpgsqlConnection conn = new NpgsqlConnection("Server=" + dbserver + ";User Id=" + userid + ";Password=Saturnus1!" + ";Database=" + database + ";");
-            const string accessToken = "706060410919768064-CZeVKheTbkIPnuwcr0Qrt5wDy0SODWm";
-            const string accessTokenSecret = "QDmECT5sUDxVUKdx557EfCsZYAMgIYCY8zuyLPyqH68fa";
-            const string consumerKey = "3cH1GIp17dOnNQl9M3X9Mh4b9";
-            const string consumerSecret = "8sY3HShekmRux4vvhC5gyqpwXDBehYup1Fsd8K53jBrDVZhOfB";
-            const string twitterAccountToDisplay = "kalliotj";
+            NpgsqlConnection conn = new NpgsqlConnection("Server=" + dbserver + ";User Id=" + userid + ";Password=xxxxxxxxxxxxxxxxxx!" + ";Database=" + database + ";");
+            const string accessToken = "xxxxxxxxxxxxxxxxxx";
+            const string accessTokenSecret = "xxxxxxxxxxxxxxxxxx";
+            const string consumerKey = "xxxxxxxxxxxxxxxxxx";
+            const string consumerSecret = "xxxxxxxxxxxxxxxxxx";
+            const string twitterAccountToDisplay = "xxxxxxxxxxxxxxxxxx";
             string title = "";
             string time = "";
             string call = "";
