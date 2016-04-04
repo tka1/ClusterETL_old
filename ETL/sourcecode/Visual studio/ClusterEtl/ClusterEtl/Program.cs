@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
@@ -11,9 +8,7 @@ using System.IO;
 
 namespace ClusterEtl
 {
-
-
-
+    
     public class Etl
     {
         public static void Log(string logMessage, TextWriter w)
@@ -48,13 +43,15 @@ namespace ClusterEtl
                 string skimmer_name = System.Configuration.ConfigurationManager.AppSettings["skimmer_name"];
                 NpgsqlConnection conn = new NpgsqlConnection("Server=" + dbserver + ";User Id=" + userid + ";Password=Saturnus1!" + ";Database=" + database + ";");
                 // Data buffer for incoming data.
-                byte[] bytes = new byte[8028];
+                byte[] bytes = new byte[8096];
                 // Connect to a remote device.
                 try
                 {
                     // Establish the remote endpoint for the socket.
                     IPHostEntry ipHostEntry = Dns.GetHostEntry(clusteradd);
+                    //Console.WriteLine(ipHostEntry.AddressList.Length);
                     IPAddress ipAddress = ipHostEntry.AddressList[1];
+                  
                     //IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), clusterport);
                     IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
                     // Create a TCP/IP  socket.
@@ -86,6 +83,7 @@ namespace ClusterEtl
                             int bytesRec = sender.Receive(bytes);
                             string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                             response = response.Trim();
+                            Console.WriteLine(response);
                             if (response.StartsWith("DX"))
                             {
                                 string skimmode = "";

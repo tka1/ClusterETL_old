@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace AdifReader
             string database = System.Configuration.ConfigurationManager.AppSettings["database"];
             string userid = System.Configuration.ConfigurationManager.AppSettings["userid"];
             string password = System.Configuration.ConfigurationManager.AppSettings["password"];
-            NpgsqlConnection conn = new NpgsqlConnection("Server=" + dbserver + ";User Id=" + userid + ";Password=Saturnus1!" + ";Database=" + database + ";");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=" + dbserver + ";User Id=" + userid + ";Password=xxxxxxxx" + ";Database=" + database + ";");
             try
             {
                 // Create an instance of StreamReader to read from a file.
@@ -33,7 +33,7 @@ namespace AdifReader
                     string band = "";
                     while ((line = sr.ReadLine()) != null)
                     {
-                        //string adif = " < CALL:6 > EA3HKA < QSO_DATE:8 > 20150308 < TIME_ON:6 > 153513 < BAND:3 > 10M < STATION_CALLSIGN:6 > OH2BBT < FREQ:8 > 28.09189 < CONTEST_ID:13 > DARC - 10M - DIGI < FREQ_RX:8 > 28.09189 < MODE:4 > RTTY < RST_RCVD:3 > 599 < RST_SENT:3 > 001 < OPERATOR:6 > OH2BBT < SRX:1 > 1 < CQZ:2 > 14 < STX:1 > 1 < APP_N1MM_POINTS:1 > 1 < APP_N1MM_RADIO_NR:1 > 1 < APP_N1MM_CONTINENT:2 > EU < APP_N1MM_RUN1RUN2:1 > 1 < APP_N1MM_RADIOINTERFACED:1 > 1 < APP_N1MM_ISORIGINAL:4 > True < APP_N1MM_NETBIOSNAME:5 > INTEL < APP_N1MM_ISRUNQSO:1 > 0 < EOR >";
+                        
                         string[] x = Regex.Split(line.Replace("\n", "").Replace("\r", ""), @"<(.*?):.*?>([^<\t\n\r\f\v]+)").Where(S => !string.IsNullOrEmpty(S)).ToArray();
 
                         int callid = Array.IndexOf(x, "CALL");

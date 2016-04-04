@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Dcndcguu7MEH5Tnal7Xt7rHQwsJnlbGvBxqkqNWUJ3M=</dsig:DigestValue>
+        <dsig:DigestValue>wS/1YXC3mnapkKQpWNuwcv3oJoNHtzSgtLY5VAglcWw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -65,13 +65,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ClusterEtl.exe.config" size="551">
+  <file name="ClusterEtl.exe.config" size="544">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zxrAXz0UmZw6zvHkh70XkahDJBpZ1nzi9OXJ66IDVU8=</dsig:DigestValue>
+      <dsig:DigestValue>vKKdgkwVOSwBxTpq7/OCWan1piBRQrPCsBcnz/p6IV0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
