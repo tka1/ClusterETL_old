@@ -1,16 +1,16 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+
 
 ### What is this repository for? ###
 
 With DX cluster dashboard you can see on line statistics from CW/RTTY skimmer or from Reverse Beacon network.
 
-There is 4 different application:
-ETl routine for saving data to database, Java application
+There are 4 different application:
+ETl routine for saving data to database, Java or C# application
 REST service, Node.js
-Web application (SPA page, Angularjs / Fusion chart) 
-WEB server, node.js
+Web application ( Angularjs / Fusion chart) 
+Dashboard web page
 
 
 
@@ -31,12 +31,10 @@ WEB server, node.js
 	copy cluster.js to directory
 	run service in command prompt: node cluster.js
 	
+	Install dashboard web page
+	
 	
 *  
 *
-
-### How do run the application ###
-
-* The user interface will be visible in the localhost:3000
 
 
